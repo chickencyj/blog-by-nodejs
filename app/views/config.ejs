@@ -1,0 +1,56 @@
+<%- include header_config %>
+<div class="container-fluid admin-header-mt ">
+
+    <h3>用户列表</h3>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>用户名</th>
+                <th>头像</th>
+                <th>文章</th>
+                <th>邮箱</th>
+                <th>管理员</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% users.forEach(function (user, index)  { %>
+            <tr>
+                <td><%= user._id.toString() %></td>
+                <td><%= user.name %></td>
+
+                <td>
+                    <% if(user.avator) { %>
+                        <img class="blog_w45_h45" src="/images/<%= user.avator %>" />
+                        <% } else { %>
+                        <img class="blog_w45_h45" src="<%= user.head %>" />
+                    <% } %>
+                </td>
+                <td>
+                    <a href="/user/articles/<%= user._id %>">(<%= user.articles.length %>)</a>
+                </td>
+                <td><%= user.email %></td>
+                <td>
+                    <% if (user.role > 50) { %>
+                    √
+                    <% } else { %>
+                    ×
+                    <% } %>
+                </td>
+                <!-- <td>
+                    {{user.status}}
+                    {%if user.status==0%}
+                    <a href="/admin/user/status?uid={{user._id.toString()}}&status=1">启用</a>
+                    {%else%}
+                    <a href="/admin/user/status?uid={{user._id.toString()}}&status=0">禁用</a>
+                    {%endif%}
+                </td> -->
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
+</article>
+<%- include footer %>

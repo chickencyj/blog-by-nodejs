@@ -1,0 +1,48 @@
+<%- include header %>
+<article>
+<% if (success) { %>
+  <div><%= success %></div>
+<% } %>
+<% if (error) { %>
+  <div><%= error %> </div>
+<% } %>
+<div class="container">
+	<div class="row">
+		<table class="table table-hover table-borderd">
+			<thread>
+				<tr>
+					<th>标题</th>
+					<th>标签</th>
+					<th>作者</th>
+					<th>发表时间</th>
+					<th>pv</th>
+					<th>查看</th>
+					<th>修改</th>
+					<th>删除</th>
+				</tr>
+			</thread>
+			<tbody>
+				<% articles.forEach(function(article, index){ %>
+					<tr class="article-id-<%= article._id %>">
+						<td><%= article.title %></td>
+						<td><%= article.tag.name %></td>
+						<td><%= article.author.name %></td>
+						<td><%= moment(article.meta.updateTime).format('MM/DD/YYYY') %></td>
+						<td><%= article.pv %></td>
+						<td><a href="/post/<%= article._id %>" target="_blank">查看</a></td>
+						<td><a href="/user/post/edit/<%= article._id %>" target="_blank">修改</a></td>
+						<td><button class="btn btn-danger del" type="button" data-id="<%= article._id %>">删除</button></td>
+					</tr>
+				<% }) %>
+			</tbody>
+		</table>
+	</div>
+</div>
+</article>
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/articlelist.js" charset="utf-8"></script>
+<%- include footer %>

@@ -1,0 +1,17 @@
+.reg_form, .login_form{
+	position:absolute;
+	top: 200px;	
+  z-index: 2;
+}
+#loginCanvas,#regCanvas{
+  overflow: hidden;
+  position: absolute;
+}
+.msg {
+	line-height: 30px;
+	color: #f69;
+	display: none;
+}
+.blog_rl_nav {
+	background:rgba(51,51,51,0.35);
+}
