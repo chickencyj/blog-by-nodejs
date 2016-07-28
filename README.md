@@ -120,12 +120,12 @@ manager: '/manager'
 项目结构:
 ----
 ```
-├── .tmp            						测试生成的sourcemaps等相关文件，方便调试
+├── .tmp            					测试生成的sourcemaps等相关文件，方便调试
 │   ├── ****   
 │   │   ├── **** 
 │   │   ├── ****
 │   │   └── ****   
-├── app         	 							MVC目录
+├── app         	 				MVC目录
 │   ├── controllers   					控制器目录
 │   │   ├── admin     					注册用户权限控制器目录
 │   │   │   ├── article
@@ -153,18 +153,18 @@ manager: '/manager'
 │   │   ├── main        				普通视图目录(文件夹)
 │   │   ├── manager     				管理员视图目录(文件夹)
 │   │   └── error       				404页面视图
-├── configs         						路由目录
+├── configs         					路由目录
 │   ├── admin         					注册用户路由
 │   ├── api           					api路由
 │   ├── main          					普通用户路由
 │   └── manager       					管理员路由
-├── node_modules    						node模块目录
-├── public          						静态文件目录
+├── node_modules    					node模块目录
+├── public          					静态文件目录
 │   ├── assets        					webpack output输出目录(文件夹)
 │   ├── css           					样式目录
 │   │   ├── common      				公共样式目录
-│   │   │   ├── header.css    	导航条样式
-│   │   │   └──reset.min.css  	重置样式以及可复用样式
+│   │   │   ├── header.css    				导航条样式
+│   │   │   └──reset.min.css  				重置样式以及可复用样式
 │   │   ├── article.css        
 │   │   ├── author_index.css
 │   │   ├── blog.css        
@@ -188,7 +188,7 @@ manager: '/manager'
 │   │   ├── bootstrap
 │   │   └── jquery
 │   └── upload        					用户自定义上传头像图片存储目录
-├── test          							测试文件目录
+├── test          					测试文件目录
 │   └── article
 │   │   └── article.test.js
 │   └── tag
@@ -196,9 +196,9 @@ manager: '/manager'
 │   └── user
 │       └── user.test.js
 ├── app.js      	       				项目入口文件
-├── package.json  	       			项目所需模块以及配置信息     
-├── webpack.config-test.js			webpack-mocha测试配置文件
-└──  webpack.config.js      		webpack配置文件
+├── package.json  	       				项目所需模块以及配置信息     
+├── webpack.config-test.js				webpack-mocha测试配置文件
+└──  webpack.config.js      				webpack配置文件
 ```
 
 后期完善:
