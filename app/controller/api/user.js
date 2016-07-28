@@ -56,7 +56,6 @@ router.post('/reg', (req, res, next) => {
 			errorMessage = '发生了一点意外';
 			break;
 		}
-		console.log('wocao+'+errorMessage);
 		res.render('register', {
 			title: '注册',
 			message: errorMessage
@@ -105,10 +104,7 @@ router.get('/logout', (req, res, next) => {
 //-----------------------------------------ajax---------------------------------------
 router.get('/checkUserName', (req, res, next) => {
 	let username = req.query.username;
-	console.log(username);
-	console.log(222222);
 	let user = new User();
-	console.log(user);
 	user.name = username;
 	if ( !user.verifyUserName() ) {
 		res.json({
