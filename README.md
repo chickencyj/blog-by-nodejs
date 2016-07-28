@@ -119,11 +119,16 @@ manager: '/manager'
 项目结构:
 ----
 ```
+<<<<<<< HEAD
 ├── .tmp												测试生成的sourcemaps等相关文件，方便调试
+=======
+├── .tmp						测试生成的sourcemaps等相关文件，方便调试
+>>>>>>> fbbd10dec75a649e71fac5158cebb6dda379d441
 │   ├── ****   
 │   │   ├── **** 
 │   │   ├── ****
 │   │   └── ****   
+<<<<<<< HEAD
 ├── app													MVC目录
 │   ├── controllers							控制器目录
 │   │   ├── admin								注册用户权限控制器目录
@@ -164,15 +169,63 @@ manager: '/manager'
 │   │   ├── common							公共样式目录
 │   │   │   ├── header.css 			导航条样式
 │   │   │   └── reset.min.css 		重置样式以及可复用样式
+=======
+├── app							MVC目录
+│   ├── controllers					控制器目录
+│   │   ├── admin					注册用户权限控制器目录
+│   │   │   ├── article
+│   │   │   └── user
+│   │   ├──ap						api接口
+│   │   │   ├── main
+│   │   │   ├── showmore
+│   │   │   └── user
+│   │   ├── main					普通用户控制器目录
+│   │   │   ├── main
+│   │   │   └── user
+│   │   ├── manage					管理员控制器目录
+│   │   │   └── main
+│   ├── model						模型目录
+│   │   ├── article
+│   │   ├── tag
+│   │   └── user
+│   ├── schema						模式目录
+│   │   ├── article
+│   │   ├── tag
+│   │   └── user
+│   └── view						视图文件目录
+│   │   ├── admin					注册用户视图目录(文件夹)
+│   │   ├── commom					公共视图目录(文件夹)
+│   │   ├── main					普通视图目录(文件夹)
+│   │   ├── manager					管理员视图目录(文件夹)
+│   │   └── error					404页面视图
+├── config						路由目录
+│   ├── admi						注册用户路由
+│   ├── api						api路由
+│   ├── main						普通用户路由
+│   └── manager						管理员路由
+├── node_modules					node模块目录
+├── public						静态文件目录
+│   ├── assets						webpack output输出目录(文件夹)
+│   ├── css						样式目录
+│   │   ├── common					公共样式目录
+│   │   │   ├── header.css				导航条样式
+│   │   │   └──reset.min.css				重置样式以及可复用样式
+>>>>>>> fbbd10dec75a649e71fac5158cebb6dda379d441
 │   │   ├── article.css        
 │   │   ├── author_index.css
 │   │   ├── blog.css        
 │   │   ├── login_reg.css
 │   │   ├── manager.css        
 │   │   └── result_tag.css
+<<<<<<< HEAD
 │   ├── images									图片目录(文件夹)
 │   ├── js											JS脚本目录
 │   │   ├── common							依赖模块目录(文件夹)
+=======
+│   ├── images						图片目录(文件夹)
+│   ├── js						JS脚本目录
+│   │   ├── common					依赖模块目录(文件夹)
+>>>>>>> fbbd10dec75a649e71fac5158cebb6dda379d441
 │   │   ├── article.js
 │   │   ├── articlelist.js
 │   │   ├── author.js
@@ -183,21 +236,36 @@ manager: '/manager'
 │   │   ├── result.js
 │   │   ├── tag.js
 │   │   └── upload.js
+<<<<<<< HEAD
 │   ├── libs										需要引用的库或者框架
 │   │   ├── bootstrap
 │   │   └── jquery
 │   └── upload									用户自定义上传头像图片存储目录
 ├── test												测试文件目录
+=======
+│   ├── libs						需要引用的库或者框架
+│   │   ├── bootstrap
+│   │   └── jquery
+│   └── upload						用户自定义上传头像图片存储目录
+├── test						测试文件目录
+>>>>>>> fbbd10dec75a649e71fac5158cebb6dda379d441
 │   └── article
 │   │   └── article.test.js
 │   └── tag
 │   │   └── tag.test.js
 │   └── user
 │       └── user.test.js
+<<<<<<< HEAD
 ├── app.js 											项目入口文件
 ├── package.json 								项目所需模块以及配置信息     
 ├── webpack.config-test.js			webpack-mocha测试配置文件
 └──  webpack.config.js 					webpack配置文件
+=======
+├── app.js						项目入口文件
+├── package.json					项目所需模块以及配置信息     
+├── webpack.config-test.js				webpack-mocha测试配置文件
+└──  webpack.config.js					webpack配置文件
+>>>>>>> fbbd10dec75a649e71fac5158cebb6dda379d441
 ```
 
 后期完善:
