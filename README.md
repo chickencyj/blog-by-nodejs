@@ -33,8 +33,7 @@
 
   网站正常访问无需管理原权限,以下网站数据的添加及删除功能需要注册帐号方能使用。
   如需管理其他user的任何数据,则需自行在mongodb中将个人账户的`role值提升至50以上`。
-  
-  具体功能可查看网站[动态效果演示](),gif图片有点大请耐心等待。
+
   * 所有文章(按发表时间排序);
   * 某个作者的所有文章(按发表时间排序);
   * 文章内容;
@@ -120,60 +119,60 @@ manager: '/manager'
 项目结构:
 ----
 ```
-├── .tmp            						测试生成的sourcemaps等相关文件，方便调试
+├── .tmp												测试生成的sourcemaps等相关文件，方便调试
 │   ├── ****   
 │   │   ├── **** 
 │   │   ├── ****
 │   │   └── ****   
-├── app         	 							MVC目录
-│   ├── controllers   					控制器目录
-│   │   ├── admin     					注册用户权限控制器目录
+├── app													MVC目录
+│   ├── controllers							控制器目录
+│   │   ├── admin								注册用户权限控制器目录
 │   │   │   ├── article
 │   │   │   └── user
-│   │   ├──api        					api接口
+│   │   ├── api									api接口
 │   │   │   ├── main
 │   │   │   ├── showmore
 │   │   │   └── user
-│   │   ├── main      					普通用户控制器目录
+│   │   ├── main 								普通用户控制器目录
 │   │   │   ├── main
 │   │   │   └── user
-│   │   ├── manager   					管理员控制器目录
+│   │   ├── manager							管理员控制器目录
 │   │   │   └── main
-│   ├── models        					模型目录
+│   ├── models									模型目录
 │   │   ├── article
 │   │   ├── tag
 │   │   └── user
-│   ├── schemas       					模式目录
+│   ├── schemas									模式目录
 │   │   ├── article
 │   │   ├── tag
 │   │   └── user
-│   └── views         					视图文件目录
-│   │   ├── admin       				注册用户视图目录(文件夹)
-│   │   ├── common      				公共视图目录(文件夹)
-│   │   ├── main        				普通视图目录(文件夹)
-│   │   ├── manager     				管理员视图目录(文件夹)
-│   │   └── error       				404页面视图
-├── configs         						路由目录
-│   ├── admin         					注册用户路由
-│   ├── api           					api路由
-│   ├── main          					普通用户路由
-│   └── manager       					管理员路由
-├── node_modules    						node模块目录
-├── public          						静态文件目录
-│   ├── assets        					webpack output输出目录(文件夹)
-│   ├── css           					样式目录
-│   │   ├── common      				公共样式目录
-│   │   │   ├── header.css    	导航条样式
-│   │   │   └──reset.min.css  	重置样式以及可复用样式
+│   └── views										视图文件目录
+│   │   ├── admin								注册用户视图目录(文件夹)
+│   │   ├── common							公共视图目录(文件夹)
+│   │   ├── main								普通视图目录(文件夹)
+│   │   ├── manager							管理员视图目录(文件夹)
+│   │   └── error								404页面视图
+├── configs											路由目录
+│   ├── admin										注册用户路由
+│   ├── api											api路由
+│   ├── main										普通用户路由
+│   └── manager									管理员路由
+├── node_modules								node模块目录
+├── public											静态文件目录
+│   ├── assets									webpack output输出目录(文件夹)
+│   ├── css											样式目录
+│   │   ├── common							公共样式目录
+│   │   │   ├── header.css 			导航条样式
+│   │   │   └── reset.min.css 		重置样式以及可复用样式
 │   │   ├── article.css        
 │   │   ├── author_index.css
 │   │   ├── blog.css        
 │   │   ├── login_reg.css
 │   │   ├── manager.css        
 │   │   └── result_tag.css
-│   ├── images        					图片目录(文件夹)
-│   ├── js            					JS脚本目录
-│   │   ├── common      				依赖模块目录(文件夹)
+│   ├── images									图片目录(文件夹)
+│   ├── js											JS脚本目录
+│   │   ├── common							依赖模块目录(文件夹)
 │   │   ├── article.js
 │   │   ├── articlelist.js
 │   │   ├── author.js
@@ -184,21 +183,21 @@ manager: '/manager'
 │   │   ├── result.js
 │   │   ├── tag.js
 │   │   └── upload.js
-│   ├── libs          					需要引用的库或者框架
+│   ├── libs										需要引用的库或者框架
 │   │   ├── bootstrap
 │   │   └── jquery
-│   └── upload        					用户自定义上传头像图片存储目录
-├── test          							测试文件目录
+│   └── upload									用户自定义上传头像图片存储目录
+├── test												测试文件目录
 │   └── article
 │   │   └── article.test.js
 │   └── tag
 │   │   └── tag.test.js
 │   └── user
 │       └── user.test.js
-├── app.js      	       				项目入口文件
-├── package.json  	       			项目所需模块以及配置信息     
+├── app.js 											项目入口文件
+├── package.json 								项目所需模块以及配置信息     
 ├── webpack.config-test.js			webpack-mocha测试配置文件
-└──  webpack.config.js      		webpack配置文件
+└──  webpack.config.js 					webpack配置文件
 ```
 
 后期完善:
