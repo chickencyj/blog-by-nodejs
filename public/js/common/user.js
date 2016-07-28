@@ -73,7 +73,7 @@ module.exports = (() => {
 					showError(obj);
 					return;
 				}
-				_ajax(obj, '/api/checkUserName');
+				_ajax(obj, '/api/user/checkUserName');
 			}
 
 			if (sVal == "user[email]") {
@@ -83,7 +83,7 @@ module.exports = (() => {
 					showError(obj);
 					return;
 				}
-				_ajax(obj, '/api/checkEmail');
+				_ajax(obj, '/api/user/checkEmail');
 			}
 
 			if (sVal == "user[password]") {
@@ -110,7 +110,6 @@ module.exports = (() => {
 			obj.next().html("");
 			if( obj.val() == "" ){
 				obj.data("onoff", false);
-				console.log(111111);
 				showError(obj);
 				return;
 			}

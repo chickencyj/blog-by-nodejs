@@ -1,17 +1,15 @@
-
 var path = require('path')
 var webpack = require('webpack');
-
 module.exports = {
   entry: {
-    index: ['./public/js/common/header.js', './public/js/index.js'],
+    index: ['./public/js/common/header.js','./public/js/common/top_click.js', './public/js/index.js'],
     article: ['./public/js/common/header.js', './public/js/article.js'],
     articlelist: ['./public/js/common/header.js', './public/js/articlelist.js'],
-    author: ['./public/js/common/header.js', './public/js/author.js'],
+    author: ['./public/js/common/header.js','./public/js/common/top_click.js', './public/js/author.js'],
     login: ['./public/js/common/header.js', './public/js/login.js'],
     register: ['./public/js/common/header.js', './public/js/register.js'],
-    result: ['./public/js/common/header.js', './public/js/result.js'],
-    tag: ['./public/js/common/header.js', './public/js/tag.js'],
+    result: ['./public/js/common/header.js','./public/js/common/top_click.js', './public/js/result.js'],
+    tag: ['./public/js/common/header.js','./public/js/common/top_click.js', './public/js/tag.js'],
     upload: ['./public/js/common/header.js', './public/js/upload.js'],
     header: ['./public/js/header.js']
   },

@@ -16,6 +16,8 @@ $(() => {
 	})
 
 	$('#login_btn').click(function() {
+		user.loginfication( $("#signinName") );
+		user.loginfication( $("#signinPwd") );
 		lf = true;
 		$vers = $(".login_form").find(".ver");
 		for (let i=0; i<$vers.length; i++) {
@@ -31,7 +33,7 @@ $(() => {
 
 	//-------------------------------canvas----------------------------
 	let w = document.documentElement.clientWidth,
-    	h = document.documentElement.clientHeight,
+    	h = document.documentElement.clientHeight-50,
     	Canvas = document.getElementById("loginCanvas"),
     	Ctx = Canvas.getContext("2d"),
 			dxdy = [],

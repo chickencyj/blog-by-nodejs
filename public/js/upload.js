@@ -37,7 +37,7 @@ $(() => {
             $('.header_icon').attr('src',data.path);
 		}
 
-		xhr.open('post', '/user/upload', true);
+		xhr.open('post', '/api/avator', true);
 
     //xhr.upload : 上传进度对象
     xhr.upload.onloadstart = () =>  {
@@ -75,7 +75,7 @@ $(() => {
             $('.header_icon').attr('src',data.path);
 		}
 
-		xhr.open('post', '/user/upload', true);
+		xhr.open('post', '/api/avator', true);
 
         //xhr.upload : 上传进度对象
     xhr.upload.onloadstart = () =>  {

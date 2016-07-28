@@ -2,7 +2,7 @@ module.exports = (() => {
 	let createTextList = (name,data,parent) => {
 		$(
 			'<div class="post-preview">'+
-			'<a href="/post/'+data._id+'">'+
+			'<a href="/article/'+data._id+'">'+
 			'<h2 class="post-title">'+data.title+'</h2>'+
 			'<div class="post-content-preview">'+data.text +'</div>'+
 			'</a>'+

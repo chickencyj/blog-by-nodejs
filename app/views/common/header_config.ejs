@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <meta http-equiv="Cache-Control" content="no-transform " />
+    <meta name="keywords" content="web前端开发，html5，css，javascript，node" />
+    <title><%= title %></title>
+     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="/css/common/reset.min.css" />
+    <link rel="stylesheet" type="text/css" href="/libs/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/common/header.css" />
+</head>
+<body class="blog_xh">
+<header role="baner">
+  <nav class="navbar navbar-default navbar-fixed-top navself">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button class="navbar-toggle pull-left collapsed" type="button"  data-toggle="collapse" data-target="#header-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <h4 class="navbar-left header_headline">
+          <a   href="/">ioopsd</a>
+      </h4>
+      <div class="navbar-collapse navbar_center collapse" id="header-navbar-collapse-1" aria-expanded="false">
+        <ul class="nav navbar-nav">   
+          <li>
+            <form class="navbar-form " method="GET" action="/results">
+              <div class="input-group ">
+                <input class="form-control header_search " type="text" size="40"  name="q"/>
+                <span class="input-group-btn" >
+                  <button class="btn btn-primary header_search_btn" type="submit" placeholder="文章名">Search</button>
+                </span>
+              </div>
+            </form>
+          </li>
+        <% if (user) { %>
+          <li class="miss_btn">
+            <span class="header_link">
+              <a  title="我的文章" href="/admin/article/post" >发表文章</a>
+            </span>
+          </li>
+          <li class="miss_btn">
+            <span class="header_link">
+              <a class="navbar-link" title="我的文章" href="/admin/article/author/<%= user._id %>" >我的文章</a>
+            </span>
+          </li>
+          <li class="miss_btn">
+            <span class="header_link">  
+              <a  class="navbar-link" title="个人中心" href="/admin/user/setprofile">个人中心</a>
+            </span>
+          </li>
+          <% if(user.role>50) {  %>
+            <li class="miss_btn">
+              <span class="header_link">
+                <!-- <a  data-toggle="modal" data-target="#signinModal" title="登录" href="javascript:void(0)">登录</a> -->
+                <a   title="管理中心" href="/manager">管理中心</a>
+              </span>
+            </li>
+          <% } %>
+          <li class="miss_btn">
+            <span class="header_link">
+              <a  title="登出" href="/api/user/logout">登出</a>
+            </span>
+          </li>
+        </ul>
+        <div class="menu_btn">
+          <a  class="blog_p0" href="/admin/user/setprofile" >
+           <% if(user.avator) { %>
+           <img class="header_icon" src="/upload/<%= user.avator %>" />
+           <% } else { %>
+           <img class="header_icon" src="<%= user.head %>" />
+           <% } %>
+         </a>
+         <div class="menu_profile clearfix">
+            <div class="menu_info">
+              <span ><%= user.name %></span>
+            </div>
+            <% if(user.role>50) {  %>
+
+              <div class="menu_info">
+                <a  title="管理中心" href="/manager">管理中心</a>
+              </div>
+            <% } %>
+            <div class="menu_wrap" >
+              <ul class="menu_number clearfix">
+                <li>
+                  <span >  
+                    <a  title="我的文章" href="/admin/article/author/<%= user._id %>" >我的文章</a>
+                  </span>
+                </li>
+                <li>
+                  <span >  
+                    <a  title="我的文章" href="/admin/article/post">发表文章</a>
+                  </span>
+                </li>
+                <li>
+                  <span >  
+                    <a  title="个人中心" href="/admin/user/setprofile">个人中心</a>
+                  </span>
+                </li>
+                <li>
+                  <span >  
+                    <a  title="退出" href="/api/user/logout">退出</a>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <% } else { %>
+          <li class="blog_ml300">
+            <span>
+              <a  class="header_link" title="登录" href="/user/login">登录</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a class="reg_btn"  title="注册" href="/user/reg">注册</a>
+            </span>
+          </li>
+        </ul>  
+        <% } %>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="header_github">
+    <div class="header_github_fork">
+        <a href="https://github.com/microsoft/code-push" target="_blank">Fork me on GitHub</a>
+    </div>
+</div>

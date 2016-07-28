@@ -1,4 +1,0 @@
-1.建立工程结构 express -e xxx   cd xxx && npm install  
-2.功能分析
-3.路由规划，设计路由规则，添加路由规则打通路由
-4.

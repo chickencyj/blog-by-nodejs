@@ -7,7 +7,7 @@ $(() => {
 		var	tr = $('.article-id-' + id);
 		$.ajax({
 			type: 'DELETE',
-			url: 'user/post/delete?id=' + id
+			url: '/api/deart?id=' + id
 		})
 		.done( (results) => {
 			if (results.success === 1) {

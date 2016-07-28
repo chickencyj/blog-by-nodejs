@@ -9,6 +9,11 @@
 .article-preview span:nth-child(n) {
 	margin-right: 20px ;
 }
+.article-preview_text {
+	line-height: 1.5;
+	font-style: normal;
+	word-spacing: 2px;
+}
 
 .pager .previous>a {
 	float: left;

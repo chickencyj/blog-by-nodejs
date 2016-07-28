@@ -1,5 +1,9 @@
 @charset "utf-8"
 
+pre {
+	background: none;
+	border: none;
+    }
 body {
 	background: #fff;
 	color: #222;
@@ -7,7 +11,6 @@ body {
 	font-family: 'Lucida Grande', Lucida Sans Unicode, Hiragino Sans GB, WenQuanYi Micro Hei, Verdana, Aril, sans-serif;
 	font-style: normal;
 	font-weight: normal;
-	line-height: 1.5;
 	position: relative;
 	padding-top: 50px;
 }
@@ -22,17 +25,11 @@ label:hover {
 a {
     color: #008cba;
     line-height: inherit;
-    text-decoration: none;
     cursor:pointer;
 }
-a:hover {
+a:hover, a:visited, a:active, a:link{
 	text-decoration: none;
 }
-
-ul, li {
-	list-style: none;
-}
-
 
 @media only screen and (min-width: 768px) {
 	.miss_btn {
@@ -221,19 +218,8 @@ ul, li {
 .header_github_fork a {
 	color: #fff;
 }
-.blog_wrapper {
-	min-height: initial;
-	background-image: url('/images/tagBg.jpg');
-	padding: 100px 0;
-  position: relative;
-  color: #f3f3f3;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
-  min-height: 300px;
-  margin-top: -51px;
-  background-attachment: fixed;
-}
+
+
 .header_title {
 	text-align:center;
 	font-family: 'Lora', 'Times New Roman', serif;
@@ -266,6 +252,7 @@ ul, li {
 	position: fixed;
 	bottom: 30px;
 	margin-left: 1040px;
+	z-index: 100;
 }
 #back_top a {
 	width: 54px;

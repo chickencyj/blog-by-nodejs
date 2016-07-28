@@ -13,6 +13,9 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 .blog_xh {
 	overflow-x: hidden;
 }
+.blog_h {
+	overflow: hidden;
+}
 .blog_p0 {
 	padding:0;
 }
@@ -45,4 +48,36 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 }
 .blog_fs16 {
 	font-size: 16px;
+}
+.blog_wrapper {
+	min-height: initial;
+	padding: 180px 0;
+  position: relative;
+  color: #f3f3f3;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  min-height: 300px;
+  margin-top: -51px;
+  background-attachment: fixed;
+}
+.blog_wrap_indeximg {
+	background-image: url('http://7xsn9b.com1.z0.glb.clouddn.com/tagBg.jpg');
+}
+.blog_wrap_tagimg {
+	background-image: url('http://7xsn9b.com1.z0.glb.clouddn.com/blog_wrap_tag.jpg');
+}
+.blog_wrap_articleimg {
+	background-image: url('http://7xsn9b.com1.z0.glb.clouddn.com/blog_wrap_article.jpg');
+}
+.blog_wrap_authorimg {
+	background-image: url('http://7xsn9b.com1.z0.glb.clouddn.com/blog_wrap_author.jpg');
+}
+.blog_wrap_resultimg {
+	background-image: url('http://7xsn9b.com1.z0.glb.clouddn.com/blog_wrap_result.jpg');
+}
+.blog_wrap_errorimg {
+	background-image: url('http://7xsn9b.com1.z0.glb.clouddn.com/error.jpg');
+	background-position:0 -450px;
+	padding: 120px 0;
 }

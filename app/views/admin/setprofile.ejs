@@ -1,0 +1,60 @@
+<%- include ../common/header_manager %>
+<section>
+  <div class="blog_wrapper blog_wrap_indeximg">
+    <div class="clearfix container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+          <h1 class="header_title"><%= title %></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<article class="blog_mt30 row">
+	<div class="setting_left col-lg-2 col-md-2 col-sm-3 col-xs-4">
+		<ul class="blog_p0">
+			<li class="blog_active">
+				<a href="/admin/user/setprofile">个人资料</a>
+			</li>
+			<li >
+				<a href="/admin/user/setavator">头像设置</a>
+			</li>
+			<li >
+				<a href="/admin/user/resetpwd">修改密码</a>
+			</li>
+		</ul>
+	</div>
+	<div class="setting_right col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-7 col-sm-offset-1 col-xs-7 col-xs-offset-1">
+		<div>
+			<form class="blog_mt30 form-horizontal" method="POST" action="/api/signature">
+					<div class="form-group">
+						<label class="col-sm-2 col-sm-offset-1 control-label" for="signinName">用户名</label>
+						<div class=" col-sm-6">
+							<input class="form-control" id="signinName" name="user[name]" type="text" value=<%= User.name %> />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 col-sm-offset-1 control-label" for="signature">个性签名</label>
+						<div class=" col-sm-6">
+							<textarea class="form-control" id="signature" name="user[signature]" type="text" ><%= User.signature %></textarea>
+						</div>
+					</div>
+					
+				<div class="form-group">
+					<div class="col-sm-offset-3 col-sm-2">
+						<button class="btn btn-default" type="submit">提交</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</article>
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/header.js" charset="utf-8"></script>
+
+
+<%- include ../common/footer %>

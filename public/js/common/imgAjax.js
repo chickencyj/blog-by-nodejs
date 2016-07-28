@@ -2,7 +2,7 @@ module.exports = (() => {
 	let createImgList = (index,data,parent) => {
 		 $(
 			'<figure class="col-lg-4 col-md-6 col-sm-6">' +
-			'<a href="/post/'+ data._id +'" class="thumbnail blog_tag_article">' +
+			'<a href="/article/'+ data._id +'" class="thumbnail blog_tag_article">' +
 			'<img src="/images/tag' + index + '.jpg">' +
 			'<figcaption class="caption">' +
 			'<h5>' + data.title + '</h5>' +

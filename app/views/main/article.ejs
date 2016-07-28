@@ -1,0 +1,81 @@
+<%- include ../common/header %>
+<section>
+  <div class="blog_wrapper blog_wrap_articleimg">
+    <div class="clearfix container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+          <h1 class="header_title"><%= title %></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<article class="blog_fs16" id="article">
+<div class="container">
+	<div class="row">
+		<div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-8 col-sm-offset-1 ">
+			<p class="article-preview">
+			  <span>作者：<a href="/author/<%= article.author._id %>"><%= article.author.name %></a> </span>
+			  <span>日期：<%= moment(article.meta.updateTime).format('MM/DD/YYYY') %></span> 
+			  <span>标签：</span>
+			  <a class="tag-alone" href="/article/tag/<%= article.tag._id %>"><%= article.tag.name %></a>
+			</p>
+			<p class="article-preview_text"><%- article.text %></p>
+			<hr />
+			<ul class="pager">
+				<% if(preArticle) { %>
+					<li class="previous">
+						<a href="/article/<%= preArticle._id %>" data-toggle="popover" data-trigger="hover" data-placement="top"  data-content="<%= preArticle.title %>">← Previous Post</a>
+					</li>
+				<% } %>
+				<% if(nextArticle) { %>
+					<li class="next">
+						<a href="/article/<%= nextArticle._id %>" data-toggle="popover" data-trigger="hover" data-placement="top"  data-content="<%= nextArticle.title %>">Next Post →</a>
+					</li>
+				<% } %>
+			</ul>
+			<%- include comment %>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+			<div class="thumbnail">
+				<div>
+				<a  href="/author/<%= article.author._id %>">
+	      	<% if(article.author.avator) { %>
+	      	<img  src="/upload/<%= article.author.avator %>" />
+	      	<% } else { %>
+	      	<img  src="<%= article.author.head %>" />
+	      	<% } %>
+	      </a>	
+				</div>
+	      
+	      <div class="caption">
+	        <h3><%= article.author.name %></h3>
+	        <h5><%= article.author.signature %></h5>
+	        <p>访问: <%= article.author.pv %></p>
+	        <a href="/author/<%= article.author._id %>">文章(<%= len %>)</a>
+	      </div>
+	    </div>
+		</div>
+
+		<div class="col-lg-3 col-md-3 col-sm-3 ">
+			<h4 class="blog_ic">博文常用标签</h4>
+				<div  class="tags_body">
+					<% tags.forEach(function(tag,index) { %>
+						<a href="/article/tag/<%= tag._id %>"><%= tag.name %></a>
+					<% }) %>
+				</div>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 article_sidebar">
+			<h4>最热文章</h4>
+			<% articles.forEach(function(article,index) { %>
+				<p><a href="/article/<%= article._id %>"><%= article.title %>(<%= article.pv %>)</a></p>
+			<% }) %>
+		</div>
+	</div>
+</div>
+</article>
+
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/article.js" charset="utf-8"></script>
+<%- include ../common/footer %>

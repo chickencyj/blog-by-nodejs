@@ -29,6 +29,10 @@ $(() => {
 
 	//注册提交按钮
 	$("#reg_btn").click(() => {
+		user.verification( $("#signupName") );
+		user.verification( $("#signupPwd") )
+		user.verification( $("#email") )
+		user.verification( $("#confirmPwd") )
 		rf = true;
 		$vers = $(".reg_form").find(".ver");
 		for (let i=0; i<$vers.length; i++) {
@@ -44,7 +48,7 @@ $(() => {
 
 	//-------------------------------canvas----------------------------
 	let w = document.documentElement.clientWidth,
-    	h = document.documentElement.clientHeight,
+    	h = document.documentElement.clientHeight-50,
     	Canvas = document.getElementById("regCanvas"),
     	Ctx = Canvas.getContext("2d"),
 			dxdy = [],

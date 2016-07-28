@@ -13,20 +13,9 @@ const port = process.env.PORT || 3000;//PORT=4000 node app
 const app = express();
 
 
-const dbUrl = 'mongodb://chicken:3320682@ds021694.mlab.com:21694/articleblog';
+// const dbUrl = 'mongodb://chicken:3320682@ds021694.mlab.com:21694/articleblog';
+const dbUrl = 'mongodb://localhost/blog';
 mongoose.connect(dbUrl);
-
-const flash = require('connect-flash');
-
-
-
-
-
-// view engine setup
-app.set('views', path.join(__dirname, './app/views'));
-app.set('view engine', 'ejs');
-
-app.use(flash());
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -35,9 +24,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+// app.use(favicon(__dirname + '/public/images/me.jpg'));
 
-//动态视图助手，本地变量
-app.locals.moment = require('moment');
+
 
 app.use(session({
   //防止篡改cookie
@@ -48,10 +37,28 @@ app.use(session({
     url: dbUrl,
     //把session保存到mongodb的collection的sessions里
     collection: 'sessions'
-  })
+  }),
+  resave: false,
+  saveUninitialized: true
 }));
 
-require('./config/routes')(app);
+
+app.use( (req, res, next) => {
+  let _user = req.session.user;
+  app.locals.user = _user;
+  next();
+})
+
+const main = require('./configs/main')(app);
+const admin = require('./configs/admin')(app);
+const api = require('./configs/api')(app);
+const manager = require('./configs/manager')(app);
+//模块挂载
+app.use('/', main);
+app.use('/admin', admin);
+app.use('/api', api);
+app.use('/manager', manager);
+
 
 
 // catch 404 and forward to error handler
@@ -61,25 +68,32 @@ app.use(function(req, res, next) {
   next(err);
 });
 
-// error handlers
 
+
+
+// error handlers
+app.set('views', path.join(__dirname, './app/views'));
+app.set('view engine', 'ejs');
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
   app.use(function(err, req, res, next) {
     res.status(err.status || 500);
+    console.log(err);
     res.render('error', {
+      title: '你来到了一片荒芜之地',
       message: err.message,
       error: err
     });
   });
 }
 
-// production error handler
-// no stacktraces leaked to user
+// // production error handler
+// // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error', {
+    title: '你来到了一片荒芜之地',
     message: err.message,
     error: {}
   });
