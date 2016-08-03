@@ -47,7 +47,7 @@
 
 项目整体效果
 -------
-[动态效果演示](http://7xsn9b.com1.z0.glb.clouddn.com/blog.gif)
+![动态效果演示](http://7xsn9b.com1.z0.glb.clouddn.com/blog.gif)
 
 
 
