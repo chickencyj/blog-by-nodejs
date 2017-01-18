@@ -1,4 +1,7 @@
 require('../css/author_index.css');
+if(module.hot) {
+    module.hot.accept();
+}
 let $ = require("jquery");
 let textAjax = require('./common/textAjax.js');
 module.exports = $(() => {

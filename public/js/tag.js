@@ -1,4 +1,7 @@
 require('../css/result_tag.css');
+if(module.hot) {
+    module.hot.accept();
+}
 let $ = require("jquery");
 let imgAjax = require('./common/imgAjax');
 $(() => {

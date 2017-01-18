@@ -1,3 +1,6 @@
+if (module.hot) {
+    module.hot.accept();
+}
 require('../css/author_index.css');
 let $ = require("jquery");
 let textAjax = require('./common/textAjax.js');

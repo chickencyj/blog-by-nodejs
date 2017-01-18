@@ -1,4 +1,7 @@
 require('../css/manager.css');
+if(module.hot) {
+    module.hot.accept();
+}
 let $ = require("jquery");
 $(() => {
     let img = document.getElementById('img');

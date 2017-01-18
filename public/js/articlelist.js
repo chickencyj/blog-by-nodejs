@@ -1,4 +1,7 @@
 require('../css/article.css');
+if(module.hot) {
+    module.hot.accept();
+}
 let $ = require("jquery");
 $(() => {
 	$('.del').click((e) => {
@@ -21,3 +24,4 @@ $(() => {
 		})   
 	})
 })
+

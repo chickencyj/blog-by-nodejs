@@ -1,4 +1,7 @@
 require('../css/login_reg.css');
+if(module.hot) {
+    module.hot.accept();
+}
 let $ = require("jquery");
 let canvas = require('./common/canvas.js');
 let user = require('./common/user.js');
