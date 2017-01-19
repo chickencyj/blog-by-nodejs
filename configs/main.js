@@ -1,4 +1,3 @@
-
 const express = require('express');
 const mainApp = express();
 const path = require('path');
@@ -6,15 +5,15 @@ mainApp.locals.moment = require('moment');
 
 let main = (app) => {
 
-mainApp.set('views', path.join(__dirname, '../app/views/main'));
-mainApp.set('view engine', 'ejs');
+	mainApp.set('views', path.join(__dirname, '../app/views/main'));
+	mainApp.set('view engine', 'ejs');
 
 
-mainApp.use( (req, res, next) => {
-  let _user = req.session.user;
-  mainApp.locals.user = _user;
-  next();
-})
+	mainApp.use((req, res, next) => {
+		let _user = req.session.user;
+		mainApp.locals.user = _user;
+		next();
+	})
 
 
 	//路由模块
@@ -24,10 +23,10 @@ mainApp.use( (req, res, next) => {
 	};
 
 	//主模块
-	mainApp.use( '/', routers.main );
+	mainApp.use('/', routers.main);
 	//用户模块
 	mainApp.use('/user', routers.user);
- 
+
 	return mainApp;
 }
 

@@ -9,38 +9,49 @@ let re = /<[^>]*>/g;
 
 router.get('/index', (req, res, next) => {
 	let page = parseInt(req.query.p, 10) || 1,
-	len,
-	time;
+		len,
+		time;
 	const count = 6;
 	let index = count * page;
 	Article
-	.find({})
-	.sort({'meta.createTime':-1})
-	.populate('author')
-	.populate('tag')
-	.exec((err, articles) => {
-		len = articles.length;
-		articles = articles.slice(index, index+count);
-		articles.forEach((article,index) => {
-			article.text = marked(article.text);
-			article.text = article.text.replace(re,'');
-			if (article.text.length > 300) {
-				article.text = article.text.substring(0,300);
-				article.text = article.text + ' ...';
-			}
+		.find({})
+		.sort({
+			'meta.createTime': -1
 		})
-		res.json({articles:articles,showmore:{page:page,len:len,count:count}});
-	})
+		.populate('author')
+		.populate('tag')
+		.exec((err, articles) => {
+			len = articles.length;
+			articles = articles.slice(index, index + count);
+			articles.forEach((article, index) => {
+				article.text = marked(article.text);
+				article.text = article.text.replace(re, '');
+				if (article.text.length > 300) {
+					article.text = article.text.substring(0, 300);
+					article.text = article.text + ' ...';
+				}
+			})
+			res.json({
+				articles: articles,
+				showmore: {
+					page: page,
+					len: len,
+					count: count
+				}
+			});
+		})
 })
 
 router.get('/author', (req, res, next) => {
 	let id = req.query.id;
 	let page = parseInt(req.query.p, 10) || 1,
-	len;
+		len;
 	const count = 6;
 	let index = count * page;
 	User
-		.findById({_id: id})
+		.findById({
+			_id: id
+		})
 		.populate('articles')
 		.exec((err, user) => {
 			if (err) {
@@ -48,76 +59,102 @@ router.get('/author', (req, res, next) => {
 				return res.redirect('/');
 			}
 			len = user.articles.length;
-			user.articles.sort((a,b)=> {
-				return b.meta.createTime-a.meta.createTime;
+			user.articles.sort((a, b) => {
+				return b.meta.createTime - a.meta.createTime;
 			})
 
-			articles = user.articles.slice(index,index+count);
-			articles.forEach((article,index) => {
+			articles = user.articles.slice(index, index + count);
+			articles.forEach((article, index) => {
 				article.text = marked(article.text);
-				article.text = article.text.replace(re,'');
+				article.text = article.text.replace(re, '');
 				if (article.text.length > 300) {
-					article.text = article.text.substring(0,300);
+					article.text = article.text.substring(0, 300);
 					article.text = article.text + ' ...';
 				}
 			})
 			articles.forEach((article) => {
 				article.author.name = user.name;
 			})
-			res.json({articles:articles, name:user.name, showmore:{page:page,len:len,count:count}});
+			res.json({
+				articles: articles,
+				name: user.name,
+				showmore: {
+					page: page,
+					len: len,
+					count: count
+				}
+			});
 		})
 })
 
 router.get('/tag', (req, res, next) => {
 	let id = req.query.id,
-			page = parseInt(req.query.p, 10) || 1,
-	    len;
+		page = parseInt(req.query.p, 10) || 1,
+		len;
 	const count = 6;
 	let index = count * page;
 	Tag
-	.findById({_id: id})
-	.populate('articles')
-	.exec((err, tag) => {
-		if (err) {
-			console.log(err);
-		};
-		len = tag.articles.length;
-		tag.articles = tag.articles.slice(index,index+count);
-		res.json({articles:tag.articles,showmore:{page:page,len:len,count:count}});
-	})
+		.findById({
+			_id: id
+		})
+		.populate('articles')
+		.exec((err, tag) => {
+			if (err) {
+				console.log(err);
+			};
+			len = tag.articles.length;
+			tag.articles = tag.articles.slice(index, index + count);
+			res.json({
+				articles: tag.articles,
+				showmore: {
+					page: page,
+					len: len,
+					count: count
+				}
+			});
+		})
 })
 
 router.get('/results', (req, res, next) => {
 	let q = req.query.q,
-			page = parseInt(req.query.p, 10) || 1,
-	    len;
+		page = parseInt(req.query.p, 10) || 1,
+		len;
 	const count = 6;
 	let index = count * page;
 	Article.count((err, count) => {
-  	if (err) {
-  		console.log(err);
-  	};
-  	len = count;
-  });
-	Article
-	.find({title: new RegExp(q + '.*', 'i')})
-	.limit(count)
-	.skip(index)
-	.exec((err, articles) => {
 		if (err) {
 			console.log(err);
-			return res.redirect('/');
-		}
-		articles.forEach((article,index) => {
-			article.text = marked(article.text);
-			article.text = article.text.replace(re,'');
-			if (article.text.length > 300) {
-				article.text = article.text.substring(0,300);
-				article.text = article.text + ' ...';
-			}
+		};
+		len = count;
+	});
+	Article
+		.find({
+			title: new RegExp(q + '.*', 'i')
 		})
-		res.json({articles:articles,showmore:{page:page,len:len,count:count}});
-	})
+		.limit(count)
+		.skip(index)
+		.exec((err, articles) => {
+			if (err) {
+				console.log(err);
+				return res.redirect('/');
+			}
+			articles.forEach((article, index) => {
+				article.text = marked(article.text);
+				article.text = article.text.replace(re, '');
+				if (article.text.length > 300) {
+					article.text = article.text.substring(0, 300);
+					article.text = article.text + ' ...';
+				}
+			})
+			res.json({
+				articles: articles,
+				showmore: {
+					page: page,
+					len: len,
+					count: count
+				}
+			});
+		})
 })
 
 

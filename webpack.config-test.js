@@ -1,5 +1,5 @@
 var nodeExternals = require('webpack-node-externals');
- 
+
 module.exports = {
   output: {
     // sourcemap support for IntelliJ/Webstorm 

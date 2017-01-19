@@ -1,21 +1,17 @@
-
-@charset "utf-8"
-
-.setting_left {
-	background-color: #fff;
-	-webkit-box-shadow: 0 0 10px #ccc;
-	-moz-box-shadow: 0 0 10px #ccc;
-	box-shadow: 0 0 10px #ccc;
-	padding:0;
+@charset "utf-8" .setting_left {
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    -moz-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc;
+    padding: 0;
 }
-
 
 .setting_left li {
     position: relative;
     padding-left: 10px;
     border-bottom: 1px solid #e6e8e9;
     margin-bottom: -1px;
-    transition:all 0.35s;
+    transition: all 0.35s;
 }
 
 .setting_left a {
@@ -31,15 +27,15 @@
     transition: color, border-color 0.2s;
 }
 
-.setting_left li:hover, .setting_left .blog_active{
-    padding-left:36px;
+.setting_left li:hover,
+.setting_left .blog_active {
+    padding-left: 36px;
     color: #005588;
-    transition:all 0.35s;
+    transition: all 0.35s;
 }
 
-
 .setting_right {
-	background-color: #fff;
+    background-color: #fff;
     -webkit-box-shadow: 0 0 10px #ccc;
     -moz-box-shadow: 0 0 10px #ccc;
     box-shadow: 0 0 10px #ccc;
@@ -50,24 +46,29 @@
 }
 
 #upload_img {
-	margin: 0 auto;
-	padding-top: 100px;
+    margin: 0 auto;
+    padding-top: 100px;
 }
+
 #upload_img img {
-    min-height:230px;
+    min-height: 230px;
 }
+
 .progress {
     margin-top: 140px;
 }
+
 .avator_btn_wrap {
-	position: relative;
+    position: relative;
 }
+
 .avator_btn {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
 }
+
 #signature {
     height: 200px;
 }

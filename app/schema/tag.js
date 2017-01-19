@@ -8,25 +8,28 @@ const TagSchema = new mongoose.Schema({
 		unique: true,
 		type: String
 	},
-	articles: [{type: ObjectId, ref: 'Article'}],
+	articles: [{
+		type: ObjectId,
+		ref: 'Article'
+	}],
 	meta: {
 		createTime: {
 			type: Date,
-			default:Date.now()
+			default: Date.now()
 		},
 		updateTime: {
 			type: Date,
-			default:Date.now()
+			default: Date.now()
 		}
 	}
 })
 
 TagSchema.pre('save', function (next) {
 	//判断数据是否是新加的
-	if(this.isNew) {
+	if (this.isNew) {
 		this.meta.createTime = this.meta.update = Date.now();
 	} else {
-		this.meta,updateTime = Date.now()
+		this.meta, updateTime = Date.now()
 	}
 
 	next();

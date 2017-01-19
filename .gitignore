@@ -29,6 +29,5 @@ node_modules
 
 libs/
 data/
-yarn.lock
 
 .DS_Store

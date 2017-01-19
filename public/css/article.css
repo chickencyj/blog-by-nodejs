@@ -1,14 +1,15 @@
 .article-preview {
-    font-family: 'Lora', 'Times New Roman', serif;
-    color: #808080;
-    font-size: 18px;
-    font-style: italic;
-    margin-top: 0;
+	font-family: 'Lora', 'Times New Roman', serif;
+	color: #808080;
+	font-size: 18px;
+	font-style: italic;
+	margin-top: 0;
 }
 
 .article-preview span:nth-child(n) {
-	margin-right: 20px ;
+	margin-right: 20px;
 }
+
 .article-preview_text {
 	line-height: 1.5;
 	font-style: normal;
@@ -18,47 +19,57 @@
 .pager .previous>a {
 	float: left;
 }
+
 .pager .next>a {
 	float: right;
-	width:134px;
+	width: 134px;
 }
+
 #article .row>div:nth-child(1) {
 	min-height: 840px;
 }
+
 #article .thumbnail .caption {
 	text-align: center;
 }
+
 #article .thumbnail .caption>* {
-	margin: 10px!important	;
+	margin: 10px!important;
 }
 
 .tags_body {
-	margin-top:10px;
+	margin-top: 10px;
 	line-height: 24px;
 	letter-spacing: -0.31em;
 }
-.tags_body a:hover,.tag-alone:hover {
+
+.tags_body a:hover,
+.tag-alone:hover {
 	background: #ccc!important;
 }
 
-.tags_body a:link ,.tag-alone:link{
+.tags_body a:link,
+.tag-alone:link {
 	background-color: #f5f5f5;
-  color: #37A;
+	color: #37A;
 }
 
-.tags_body a , .tag-alone{
-    display: inline-block;
-    letter-spacing: normal;
-    margin: 0 8px 8px 0;
-    padding: 0 8px;
-    background-color: #f5f5f5;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
+.tags_body a,
+.tag-alone {
+	display: inline-block;
+	letter-spacing: normal;
+	margin: 0 8px 8px 0;
+	padding: 0 8px;
+	background-color: #f5f5f5;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
 }
-.tags_body a:visited ,.tag-alone:visited{
-    color: #666699;
-    text-decoration: none;
+
+.tags_body a:visited,
+.tag-alone:visited {
+	color: #666699;
+	text-decoration: none;
 }
 
 .article_sidebar {
@@ -67,10 +78,12 @@
 	letter-spacing: 1px;
 	box-shadow: 4px 4px 3px #eee;
 }
+
 .article_sidebar h4 {
 	margin-top: 10px!important;
 	text-align: center;
 }
+
 .article_sidebar p {
 	margin-top: 10px;
 	white-space: nowrap;
