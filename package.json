@@ -1,11 +1,11 @@
 {
   "name": "blog",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "main": "app.js",
   "scripts": {
     "build": "webpack",
-    "start": "cross-env NODE_ENV=dev nodemon --watch app --exec  node app.js",
+    "start": "`cross-env NODE_ENV=dev nodemon --watch app --exec  node app.js",
     "start:HMR": "webpack --config webpack.config.js & cross-env NODE_ENV=dev nodemon --watch app --exec  node app.js",
     "start:prod": "webpack --config webpack.production.config.js -p & cross-env NODE_ENV=production node app.js",
     "test": "mocha-webpack --webpack-config webpack.config-test.js \"test/**/*.test.js\""
@@ -55,6 +55,10 @@
     "webpack-dev-server": "^2.1.0-beta.11",
     "webpack-hot-middleware": "^2.12.2",
     "webpack-node-externals": "~1.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chickencyj/blog-by-nodejs.git"
   },
   "description": "blog",
   "keywords": [
