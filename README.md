@@ -64,8 +64,14 @@
 
 运行与使用:
 ----
-1. 启动数据库`mongod`
-2. 使用命令行工具在该项目目录下使用 `npm start` 或者 `node app.js` 运行程序,默认是使用3000端口，可到app.js中将const port = process.env.PORT || 3000 中3000改为你需要的端口，运行成功可在命令行看到Blog satrt on port:3000;
+1. 启动数据库`mongod` 以及 安装 yarn (https://yarnpkg.com/en/docs/install)
+2.  使用命令行工具在该项目目录下使用 
+- yarn satrt
+- yarn start:HMR 
+- yarn start: prod
+- yarn test具体
+- 具体请到package.json查看
+3. 默认是使用3000端口，可到app.js中将const port = process.env.PORT || 3000 中3000改为你需要的端口，运行成功可在命令行看到Blog satrt on port:3000;
 
 
 项目页面:
