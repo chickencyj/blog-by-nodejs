@@ -55,11 +55,11 @@
 /******/ 			};
 /******/ 		});
 /******/ 	}
-/******/
+
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "c8fc77e6a4524ffd0a53"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "68904c898bfc449c687e"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -240,7 +240,7 @@
 /******/ 				};
 /******/ 			});
 /******/ 			hotUpdate = {};
-/******/ 			var chunkId = 7;
+/******/ 			var chunkId = 11;
 /******/ 			{ // eslint-disable-line no-lone-blocks
 /******/ 				/*globals chunkId */
 /******/ 				hotEnsureUpdateChunk(chunkId);
@@ -633,17 +633,17 @@
 /******/ 		hotSetStatus("idle");
 /******/ 		return Promise.resolve(outdatedModules);
 /******/ 	}
-/******/
+
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
-/******/
+
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
-/******/
+
 /******/ 		// Check if module is in cache
 /******/ 		if(installedModules[moduleId])
 /******/ 			return installedModules[moduleId].exports;
-/******/
+
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			i: moduleId,
@@ -653,27 +653,27 @@
 /******/ 			parents: (hotCurrentParentsTemp = hotCurrentParents, hotCurrentParents = [], hotCurrentParentsTemp),
 /******/ 			children: []
 /******/ 		};
-/******/
+
 /******/ 		// Execute the module function
 /******/ 		modules[moduleId].call(module.exports, module, module.exports, hotCreateRequire(moduleId));
-/******/
+
 /******/ 		// Flag the module as loaded
 /******/ 		module.l = true;
-/******/
+
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/
-/******/
+
+
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = modules;
-/******/
+
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
-/******/
+
 /******/ 	// identity function for calling harmory imports with the correct context
 /******/ 	__webpack_require__.i = function(value) { return value; };
-/******/
+
 /******/ 	// define getter function for harmory exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		Object.defineProperty(exports, name, {
@@ -682,7 +682,7 @@
 /******/ 			get: getter
 /******/ 		});
 /******/ 	};
-/******/
+
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
 /******/ 	__webpack_require__.n = function(module) {
 /******/ 		var getter = module && module.__esModule ?
@@ -691,22 +691,50 @@
 /******/ 		__webpack_require__.d(getter, 'a', getter);
 /******/ 		return getter;
 /******/ 	};
-/******/
+
 /******/ 	// Object.prototype.hasOwnProperty.call
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
+
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "http://localhost:3000/";
-/******/
+
 /******/ 	// __webpack_hash__
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
-/******/
+
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(69)(__webpack_require__.s = 69);
+/******/ 	return hotCreateRequire(52)(__webpack_require__.s = 52);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)();
+// imports
+
+
+// module
+exports.push([module.i, "pre {\n\tbackground: none;\n\tborder: none;\n    }\nbody {\n\tbackground: #fff;\n\tcolor: #222;\n\tcursor: auto;\n\tfont-family: 'Lucida Grande', Lucida Sans Unicode, Hiragino Sans GB, WenQuanYi Micro Hei, Verdana, Aril, sans-serif;\n\tfont-style: normal;\n\tfont-weight: normal;\n\tposition: relative;\n\tpadding-top: 50px;\n}\n\ntextarea {\n\tresize: none;\n}\n\nlabel:hover {\n\tcursor: pointer;\n}\na {\n    color: #008cba;\n    line-height: inherit;\n    cursor:pointer;\n}\na:hover, a:visited, a:active, a:link{\n\ttext-decoration: none;\n}\n\n@media only screen and (min-width: 768px) {\n\t.miss_btn {\n\t\tdisplay: none!important;\n\t}\n}\n\n@media only screen and (max-width: 768px) {\n\t.menu_btn {\n\t\tdisplay: none;\n\t}\n\t.navbar-collapse .nav{\n\t\tmargin-left: 0!important;\n\t}\n\t.navbar-collapse .nav li:nth-child(2) {\n\t\tmargin:0!important;\n\t}\n\t.navbar-collapse .nav li:nth-child(2) a {\n\t\twidth:68px;\n\t\tborder-radius: 3px;\n\t}\n\t#article .row>div:nth-child(1) {\n    min-height: 0px!important\t;\n\t}\n\t#article .row>div:nth-child(2) {\n    display:none;\n\t}\n\t#article .row>div:nth-child(4) {\n    margin: 0px!important\t;\n\t}\n\t.post-content-preview {\n\t\tfont-size: 13px!important;\n\t}\n}\n\n\n.is_visible {\n\tposition: fixed;\n\ttop: -61px;\n\tborder-bottom: 1px solid #f2f2f2;\n\t-webkit-transition: -webkit-transform 0.3s;\n\t-moz-transition: -moz-transform 0.3s;\n\ttransition: transform 0.3s;\n}\n\n.navbar-collapse .nav{\n\tmargin-left: 50px;\n}\n.navbar-form {\n\tmargin-left: 50px;\n\tmargin:5px 0 !important;\n\tborder:0;\n\tpadding:0\n}\n.navself {\n  transition: all .2s;\n  background: linear-gradient(to bottom,rgba(0,0,0,0.9) 0,rgba(0,0,0,0) 95%,rgba(0,0,0,0) 99%);\n  border:none;\n}\n.header_headline a{\n\tfont-family: 'Lora', 'Times New Roman', serif;\n\tfont-size: 22px;\n\tfont-style: italic;\n\tcolor: #fff !important;\n}\n.header_search, .header_search_btn {\n\tbackground: linear-gradient(to bottom,rgba(0,0,0,0.9) 0,rgba(0,0,0,0) 95%,rgba(0,0,0,0) 99%);\n\tcolor: #fff;\n\tborder-color: #fff;\n}\n.menu_btn {\n\tposition:relative;\n\tfloat:right!important;\n\tmargin-right:150px;\n\theight: 45px;\n\tline-height: 45px;\n\twidth:45px;\n}\n.header_icon {\n\n\tposition:absolute;\n\tleft:0;\n\ttop:0;\n\tz-index:20;\n\twidth: 50px;\n\theight: 50px;\n\tcursor: pointer;\n\tborder-radius: 50%;\n\ttransition: all .1s;\n}\n.header_icon:hover {\n\tleft:-10px;\n\ttop:5px;\n\twidth:65px;\n\theight:65px;\n\ttransition: all .1s;\n}\n.menu_profile {\n\tdisplay:none;\n\tposition: absolute;\n\tleft: 50%;\n\ttop: 45px;\n\tpadding: 25px 0 5px 0;\n\twidth: 260px;\n\tmargin-left: -130px;\n\tbackground: rgba(255,255,255,.2);\n\tbox-shadow: rgba(0,0,0,0.16) 0 2px 4px;\n\tlist-style: none;\n\tz-index: 10;\n\tborder-radius: 0 0 4px 4px;\n}\n.menu_info {\n\ttext-align:center;\n\tcolor:#34aff9;\n}\n.menu_wrap {\n\tmargin: 0 30px;\n\toverflow: hidden;\n}\n.menu_number {\n\tborder-top: 1px solid #e5e9ef;\n  padding: 10px 0;\n\t\n}\n.menu_number li {\n\tdisplay:inline-block;\n\twidth: 80px;\n}\n.menu_number li:nth-child(2n) {\n\ttext-align: right;\n\tmargin-left: 25px;\n}\n.menu_number li:nth-child(2n+1) {\n\tmargin-right: 10px;\n}\n.reg_btn {\n\t\tborder-radius: 2px;\n    font-size: 14px;\n    font-weight: 500;\n    margin: 0;\n    min-width: 0;\n    padding: 18px 20px;\n    color: #fff;\n    background-color: #f96816;\n    border:none;\n    display: inline-block;\n}\n.reg_btn:hover {\n\tcolor: #10120f;\n}\n.header_github {\n\twidth: 150px;\n\theight: 150px;\n\tposition: absolute;\n\toverflow: hidden;\n\ttop: 0;\n\tz-index: 9999;\n\tpointer-events: none;\n\tright:0;\n}\n.header_github_fork {\n\tposition: absolute;\n\tpadding: 4px 25px;\n\tbackground-color: #a00;\n\tbackground-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.15)));\n\tbackground-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));\n\tbackground-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));\n\tbackground-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));\n\tbackground-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));\n\tbackground-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));\n\t-webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);\n\t-moz-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);\n\tbox-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);\n\tfont: 700 13px \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n\tz-index: 9999;\n\tpointer-events: auto;\n\tbackground-color: #6c9548;\n\ttop: 35px;\n\tright: -33px;\n\t-webkit-transform: rotate(45deg);\n\t-moz-transform: rotate(45deg);\n\t-ms-transform: rotate(45deg);\n\t-o-transform: rotate(45deg);\n\ttransform: rotate(45deg);\n}\n.header_github_fork a {\n\tcolor: #fff;\n}\n\n\n.header_title {\n\ttext-align:center;\n\tfont-family: 'Lora', 'Times New Roman', serif;\n\tfont-style: italic;\n\tcolor: #fff !important;\n}\n\n.header_link a, .header_link:nth-child(n){\n\tfont-weight: 500;\n\tfont-size: 1em;\n\tcolor: #34aff9 !important; \n\ttransition: color .2s;\n}\n.header_link {\n\tdisplay:inline-block;\n\twidth:100px;\n\ttext-align:center;\n\tpadding:18px 0;\n}\n.header_link:hover {\n\tbackground-color:rgba(99,99,99,.2);\n\tcursor:pointer;\n}\n#posttitle,#posttag {\n\twidth: 200px;\n\tdisplay: inline-block;\n}\n\n#back_top {\n\tposition: fixed;\n\tbottom: 30px;\n\tmargin-left: 1040px;\n\tz-index: 100;\n}\n#back_top a {\n\twidth: 54px;\n\theight: 54px;\n\tdisplay: block;\n\tbackground: #ddd url(http://7xsn9b.com1.z0.glb.clouddn.com/Back-Top_Arrow.png) no-repeat center center;\n\tbackground-color: #aaa;\n\t-webkit-border-radius: 7px;\n\t-moz-border-radius: 7px;\n\tborder-radius: 7px;\n\t-webkit-transition: 1s;\n\t-moz-transition: 1s;\n\ttransition: 1s;\n}\n#back_top a:hover {\n\tbackground-color: #333;\n\ttransition: 1s;\n}\n/* footer */\n.blog_footer {\n\tpadding-top: 40px;\n\tpadding-bottom: 40px;\n\tmargin-top: 20px;\n\tfont-size: 12px;\n\tline-height: 1.5;\n\tcolor: #767676;\n\tborder-top: 1px solid #eee;\n}\n.blog_footer img {\n\twidth: 50px;\n\theight:50px;\n\tborder-radius: 50%;\n\ttransition: all 1000ms ease-in-out;\n}\n.blog_footer img:hover {\n\ttransform: rotate(360deg);\n\ttransition: all 1000ms ease-in-out;\n}", ""]);
+
+// exports
+
+
+/***/ },
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)();
+// imports
+
+
+// module
+exports.push([module.i, "html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}\n.blog_dn {\n\tdisplay:none;\n}\n.blog_w0 {\n\twidth: 0%;\n}\n.blog_w45_h45 {\n\twidth: 45px;\n\theight: 45px;\n}\n.blog_xh {\n\toverflow-x: hidden;\n}\n.blog_h {\n\toverflow: hidden;\n}\n.blog_p0 {\n\tpadding:0;\n}\n.blog_ic {\n\ttext-align: center;\n}\n.blog_cw {\n\tcolor: #fff;\n}\n.blog_fl {\n\tfloat: left;\n}\n.blog_fr {\n\tfloat: right;\n}\n.blog_mt10 {\n\tmargin-top: 10px;\n}\n.blog_mt30 {\n\tmargin-top: 30px;\n}\n.blog_mt50 {\n\tmargin-top: 50px;\n}\n.blog_ml300 {\n\tmargin-left: 300px;\n}\n.blog_ml500 {\n\tmargin-left: 420px;\n}\n.blog_fs16 {\n\tfont-size: 16px;\n}\n.blog_wrapper {\n\tmin-height: initial;\n\tpadding: 180px 0;\n  position: relative;\n  color: #f3f3f3;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: top;\n  min-height: 300px;\n  margin-top: -51px;\n  background-attachment: fixed;\n}\n.blog_wrap_indeximg {\n\tbackground-image: url('http://7xsn9b.com1.z0.glb.clouddn.com/tagBg.jpg');\n}\n.blog_wrap_tagimg {\n\tbackground-image: url('http://7xsn9b.com1.z0.glb.clouddn.com/blog_wrap_tag.jpg');\n}\n.blog_wrap_articleimg {\n\tbackground-image: url('http://7xsn9b.com1.z0.glb.clouddn.com/blog_wrap_article.jpg');\n}\n.blog_wrap_authorimg {\n\tbackground-image: url('http://7xsn9b.com1.z0.glb.clouddn.com/blog_wrap_author.jpg');\n}\n.blog_wrap_resultimg {\n\tbackground-image: url('http://7xsn9b.com1.z0.glb.clouddn.com/blog_wrap_result.jpg');\n}\n.blog_wrap_errorimg {\n\tbackground-image: url('http://7xsn9b.com1.z0.glb.clouddn.com/error.jpg');\n\tbackground-position:0 -450px;\n\tpadding: 120px 0;\n}", ""]);
+
+// exports
+
+
+/***/ },
+/* 2 */
 /***/ function(module, exports) {
 
 /*
@@ -759,7 +787,7 @@ module.exports = function () {
 };
 
 /***/ },
-/* 1 */
+/* 3 */
 /***/ function(module, exports) {
 
 /*
@@ -1011,38 +1039,10 @@ function updateLink(linkElement, obj) {
 
 
 /***/ },
-/* 2 */
-/***/ function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)();
-// imports
-
-
-// module
-exports.push([module.i, "@charset \"utf-8\"\n\npre {\n\tbackground: none;\n\tborder: none;\n    }\nbody {\n\tbackground: #fff;\n\tcolor: #222;\n\tcursor: auto;\n\tfont-family: 'Lucida Grande', Lucida Sans Unicode, Hiragino Sans GB, WenQuanYi Micro Hei, Verdana, Aril, sans-serif;\n\tfont-style: normal;\n\tfont-weight: normal;\n\tposition: relative;\n\tpadding-top: 50px;\n}\n\ntextarea {\n\tresize: none;\n}\n\nlabel:hover {\n\tcursor: pointer;\n}\na {\n    color: #008cba;\n    line-height: inherit;\n    cursor:pointer;\n}\na:hover, a:visited, a:active, a:link{\n\ttext-decoration: none;\n}\n\n@media only screen and (min-width: 768px) {\n\t.miss_btn {\n\t\tdisplay: none!important;\n\t}\n}\n\n@media only screen and (max-width: 768px) {\n\t.menu_btn {\n\t\tdisplay: none;\n\t}\n\t.navbar-collapse .nav{\n\t\tmargin-left: 0!important;\n\t}\n\t.navbar-collapse .nav li:nth-child(2) {\n\t\tmargin:0!important;\n\t}\n\t.navbar-collapse .nav li:nth-child(2) a {\n\t\twidth:68px;\n\t\tborder-radius: 3px;\n\t}\n\t#article .row>div:nth-child(1) {\n    min-height: 0px!important\t;\n\t}\n\t#article .row>div:nth-child(2) {\n    display:none;\n\t}\n\t#article .row>div:nth-child(4) {\n    margin: 0px!important\t;\n\t}\n\t.post-content-preview {\n\t\tfont-size: 13px!important;\n\t}\n}\n\n\n.is_visible {\n\tposition: fixed;\n\ttop: -61px;\n\tborder-bottom: 1px solid #f2f2f2;\n\t-webkit-transition: -webkit-transform 0.3s;\n\t-moz-transition: -moz-transform 0.3s;\n\ttransition: transform 0.3s;\n}\n\n.navbar-collapse .nav{\n\tmargin-left: 50px;\n}\n.navbar-form {\n\tmargin-left: 50px;\n\tmargin:5px 0 !important;\n\tborder:0;\n\tpadding:0\n}\n.navself {\n  transition: all .2s;\n  background: linear-gradient(to bottom,rgba(0,0,0,0.9) 0,rgba(0,0,0,0) 95%,rgba(0,0,0,0) 99%);\n  border:none;\n}\n.header_headline a{\n\tfont-family: 'Lora', 'Times New Roman', serif;\n\tfont-size: 22px;\n\tfont-style: italic;\n\tcolor: #fff !important;\n}\n.header_search, .header_search_btn {\n\tbackground: linear-gradient(to bottom,rgba(0,0,0,0.9) 0,rgba(0,0,0,0) 95%,rgba(0,0,0,0) 99%);\n\tcolor: #fff;\n\tborder-color: #fff;\n}\n.menu_btn {\n\tposition:relative;\n\tfloat:right!important;\n\tmargin-right:150px;\n\theight: 45px;\n\tline-height: 45px;\n\twidth:45px;\n}\n.header_icon {\n\n\tposition:absolute;\n\tleft:0;\n\ttop:0;\n\tz-index:20;\n\twidth: 50px;\n\theight: 50px;\n\tcursor: pointer;\n\tborder-radius: 50%;\n\ttransition: all .1s;\n}\n.header_icon:hover {\n\tleft:-10px;\n\ttop:5px;\n\twidth:65px;\n\theight:65px;\n\ttransition: all .1s;\n}\n.menu_profile {\n\tdisplay:none;\n\tposition: absolute;\n\tleft: 50%;\n\ttop: 45px;\n\tpadding: 25px 0 5px 0;\n\twidth: 260px;\n\tmargin-left: -130px;\n\tbackground: rgba(255,255,255,.2);\n\tbox-shadow: rgba(0,0,0,0.16) 0 2px 4px;\n\tlist-style: none;\n\tz-index: 10;\n\tborder-radius: 0 0 4px 4px;\n}\n.menu_info {\n\ttext-align:center;\n\tcolor:#34aff9;\n}\n.menu_wrap {\n\tmargin: 0 30px;\n\toverflow: hidden;\n}\n.menu_number {\n\tborder-top: 1px solid #e5e9ef;\n  padding: 10px 0;\n\t\n}\n.menu_number li {\n\tdisplay:inline-block;\n\twidth: 80px;\n}\n.menu_number li:nth-child(2n) {\n\ttext-align: right;\n\tmargin-left: 25px;\n}\n.menu_number li:nth-child(2n+1) {\n\tmargin-right: 10px;\n}\n.reg_btn {\n\t\tborder-radius: 2px;\n    font-size: 14px;\n    font-weight: 500;\n    margin: 0;\n    min-width: 0;\n    padding: 18px 20px;\n    color: #fff;\n    background-color: #f96816;\n    border:none;\n    display: inline-block;\n}\n.reg_btn:hover {\n\tcolor: #10120f;\n}\n.header_github {\n\twidth: 150px;\n\theight: 150px;\n\tposition: absolute;\n\toverflow: hidden;\n\ttop: 0;\n\tz-index: 9999;\n\tpointer-events: none;\n\tright:0;\n}\n.header_github_fork {\n\tposition: absolute;\n\tpadding: 4px 25px;\n\tbackground-color: #a00;\n\tbackground-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.15)));\n\tbackground-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));\n\tbackground-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));\n\tbackground-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));\n\tbackground-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));\n\tbackground-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));\n\t-webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);\n\t-moz-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);\n\tbox-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);\n\tfont: 700 13px \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n\tz-index: 9999;\n\tpointer-events: auto;\n\tbackground-color: #6c9548;\n\ttop: 35px;\n\tright: -33px;\n\t-webkit-transform: rotate(45deg);\n\t-moz-transform: rotate(45deg);\n\t-ms-transform: rotate(45deg);\n\t-o-transform: rotate(45deg);\n\ttransform: rotate(45deg);\n}\n.header_github_fork a {\n\tcolor: #fff;\n}\n\n\n.header_title {\n\ttext-align:center;\n\tfont-family: 'Lora', 'Times New Roman', serif;\n\tfont-style: italic;\n\tcolor: #fff !important;\n}\n\n.header_link a, .header_link:nth-child(n){\n\tfont-weight: 500;\n\tfont-size: 1em;\n\tcolor: #34aff9 !important; \n\ttransition: color .2s;\n}\n.header_link {\n\tdisplay:inline-block;\n\twidth:100px;\n\ttext-align:center;\n\tpadding:18px 0;\n}\n.header_link:hover {\n\tbackground-color:rgba(99,99,99,.2);\n\tcursor:pointer;\n}\n#posttitle,#posttag {\n\twidth: 200px;\n\tdisplay: inline-block;\n}\n\n#back_top {\n\tposition: fixed;\n\tbottom: 30px;\n\tmargin-left: 1040px;\n\tz-index: 100;\n}\n#back_top a {\n\twidth: 54px;\n\theight: 54px;\n\tdisplay: block;\n\tbackground: #ddd url(http://7xsn9b.com1.z0.glb.clouddn.com/Back-Top_Arrow.png) no-repeat center center;\n\tbackground-color: #aaa;\n\t-webkit-border-radius: 7px;\n\t-moz-border-radius: 7px;\n\tborder-radius: 7px;\n\t-webkit-transition: 1s;\n\t-moz-transition: 1s;\n\ttransition: 1s;\n}\n#back_top a:hover {\n\tbackground-color: #333;\n\ttransition: 1s;\n}\n/* footer */\n.blog_footer {\n\tpadding-top: 40px;\n\tpadding-bottom: 40px;\n\tmargin-top: 20px;\n\tfont-size: 12px;\n\tline-height: 1.5;\n\tcolor: #767676;\n\tborder-top: 1px solid #eee;\n}\n.blog_footer img {\n\twidth: 50px;\n\theight:50px;\n\tborder-radius: 50%;\n\ttransition: all 1000ms ease-in-out;\n}\n.blog_footer img:hover {\n\ttransform: rotate(360deg);\n\ttransition: all 1000ms ease-in-out;\n}", ""]);
-
-// exports
-
-
-/***/ },
-/* 3 */
-/***/ function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)();
-// imports
-
-
-// module
-exports.push([module.i, "@charset \"utf-8\" \nhtml,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}\n.blog_dn {\n\tdisplay:none;\n}\n.blog_w0 {\n\twidth: 0%;\n}\n.blog_w45_h45 {\n\twidth: 45px;\n\theight: 45px;\n}\n.blog_xh {\n\toverflow-x: hidden;\n}\n.blog_h {\n\toverflow: hidden;\n}\n.blog_p0 {\n\tpadding:0;\n}\n.blog_ic {\n\ttext-align: center;\n}\n.blog_cw {\n\tcolor: #fff;\n}\n.blog_fl {\n\tfloat: left;\n}\n.blog_fr {\n\tfloat: right;\n}\n.blog_mt10 {\n\tmargin-top: 10px;\n}\n.blog_mt30 {\n\tmargin-top: 30px;\n}\n.blog_mt50 {\n\tmargin-top: 50px;\n}\n.blog_ml300 {\n\tmargin-left: 300px;\n}\n.blog_ml500 {\n\tmargin-left: 420px;\n}\n.blog_fs16 {\n\tfont-size: 16px;\n}\n.blog_wrapper {\n\tmin-height: initial;\n\tpadding: 180px 0;\n  position: relative;\n  color: #f3f3f3;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: top;\n  min-height: 300px;\n  margin-top: -51px;\n  background-attachment: fixed;\n}\n.blog_wrap_indeximg {\n\tbackground-image: url('http://7xsn9b.com1.z0.glb.clouddn.com/tagBg.jpg');\n}\n.blog_wrap_tagimg {\n\tbackground-image: url('http://7xsn9b.com1.z0.glb.clouddn.com/blog_wrap_tag.jpg');\n}\n.blog_wrap_articleimg {\n\tbackground-image: url('http://7xsn9b.com1.z0.glb.clouddn.com/blog_wrap_article.jpg');\n}\n.blog_wrap_authorimg {\n\tbackground-image: url('http://7xsn9b.com1.z0.glb.clouddn.com/blog_wrap_author.jpg');\n}\n.blog_wrap_resultimg {\n\tbackground-image: url('http://7xsn9b.com1.z0.glb.clouddn.com/blog_wrap_result.jpg');\n}\n.blog_wrap_errorimg {\n\tbackground-image: url('http://7xsn9b.com1.z0.glb.clouddn.com/error.jpg');\n\tbackground-position:0 -450px;\n\tpadding: 120px 0;\n}", ""]);
-
-// exports
-
-
-/***/ },
 /* 4 */
 /***/ function(module, exports) {
 
-module.exports = jQuery;
+module.exports = window.$;
 
 /***/ },
 /* 5 */
@@ -1254,7 +1254,7 @@ var options = {
   name: ''
 };
 if (true) {
-  var querystring = __webpack_require__(17);
+  var querystring = __webpack_require__(16);
   var overrides = querystring.parse(__resourceQuery.slice(1));
   if (overrides.path) options.path = overrides.path;
   if (overrides.timeout) options.timeout = overrides.timeout;
@@ -1336,11 +1336,11 @@ if (typeof window !== 'undefined' && !window[singletonKey]) {
 }
 
 function createReporter() {
-  var strip = __webpack_require__(18);
+  var strip = __webpack_require__(17);
 
   var overlay;
   if (typeof document !== 'undefined' && options.overlay) {
-    overlay = __webpack_require__(19);
+    overlay = __webpack_require__(18);
   }
 
   var previousProblems = null;
@@ -1371,7 +1371,7 @@ function createReporter() {
   };
 }
 
-var processUpdate = __webpack_require__(20);
+var processUpdate = __webpack_require__(19);
 
 var customHandler;
 var subscribeAllHandler;
@@ -1427,45 +1427,68 @@ if (module) {
     }
   };
 }
-/* WEBPACK VAR INJECTION */}.call(exports, "?reload=true", __webpack_require__(21)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, "?reload=true", __webpack_require__(20)(module)))
 
 /***/ },
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-let $ = __webpack_require__(4);
-__webpack_require__(9);
+"use strict";
+'use strict';
+
+var $ = __webpack_require__(4);
+__webpack_require__(21);
 __webpack_require__(8);
-$(() => {
-	let overTimer = null,
+$(function () {
+	var overTimer = null,
 	    outTimer = null;
-	$('.header_icon').on('mouseover', () => {
+	$('.header_icon').on('mouseover', function () {
 		$('.header_icon_active').css('display', 'block');
 		clearTimeout(outTimer);
-		overTimer = setTimeout(() => {
+		overTimer = setTimeout(function () {
 			$('.menu_profile').css('display', 'block');
-			$('.header_icon').css({ 'left': '-10px', 'top': '5px', 'width': '65px', 'height': '65px' });
+			$('.header_icon').css({
+				'left': '-10px',
+				'top': '5px',
+				'width': '65px',
+				'height': '65px'
+			});
 			$('.header_icon_active').show();
 		}, 200);
 	});
-	$('.menu_profile').on('mouseover', () => {
+	$('.menu_profile').on('mouseover', function () {
 		clearTimeout(outTimer);
 		$('.menu_profile').css('display', 'block');
-		$('.header_icon').css({ 'left': '-10px', 'top': '5px', 'width': '65px', 'height': '65px' });
+		$('.header_icon').css({
+			'left': '-10px',
+			'top': '5px',
+			'width': '65px',
+			'height': '65px'
+		});
 	});
-	$('.header_icon').on('mouseout', () => {
+	$('.header_icon').on('mouseout', function () {
 		$('.menu_profile').hide();
-		$('.header_icon').css({ 'left': '0px', 'top': '0px', 'width': '45px', 'height': '45px' });
+		$('.header_icon').css({
+			'left': '0px',
+			'top': '0px',
+			'width': '45px',
+			'height': '45px'
+		});
 		clearTimeout(overTimer);
 	});
-	$('.menu_profile').on('mouseout', ev => {
+	$('.menu_profile').on('mouseout', function (ev) {
 		outTimer = setTimeout(function () {
 			$('.menu_profile').hide();
-			$('.header_icon').css({ 'left': '0px', 'top': '0px', 'width': '45px', 'height': '45px' });
+			$('.header_icon').css({
+				'left': '0px',
+				'top': '0px',
+				'width': '45px',
+				'height': '45px'
+			});
 		}, 400);
 	});
 
-	let scrollFunc = e => {
+	var scrollFunc = function scrollFunc(e) {
 		e = e || window.event;
 		if (e.wheelDelta) {
 			//判断浏览器IE，谷歌滑轮事件               
@@ -1490,7 +1513,7 @@ $(() => {
 		}
 	};
 
-	let showHeader = (e, fn) => {
+	var showHeader = function showHeader(e, fn) {
 		if ($(window).scrollTop() > 200) {
 			if (!fn(e)) {
 				$('.navself').addClass('is_visible');
@@ -1527,17 +1550,17 @@ $(() => {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(2);
+var content = __webpack_require__(0);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(1)(content, {});
+var update = __webpack_require__(3)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(true) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept(2, function() {
-			var newContent = __webpack_require__(2);
+		module.hot.accept(0, function() {
+			var newContent = __webpack_require__(0);
 			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
 			update(newContent);
 		});
@@ -1548,32 +1571,6 @@ if(true) {
 
 /***/ },
 /* 9 */
-/***/ function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(3);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// add the styles to the DOM
-var update = __webpack_require__(1)(content, {});
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(true) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept(3, function() {
-			var newContent = __webpack_require__(3);
-			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ },
-/* 10 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -1757,7 +1754,7 @@ function _setTags(colors) {
 ansiHTML.reset();
 
 /***/ },
-/* 11 */
+/* 10 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -1769,18 +1766,18 @@ module.exports = function () {
 };
 
 /***/ },
-/* 12 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 module.exports = {
-  XmlEntities: __webpack_require__(14),
-  Html4Entities: __webpack_require__(13),
+  XmlEntities: __webpack_require__(13),
+  Html4Entities: __webpack_require__(12),
   Html5Entities: __webpack_require__(5),
   AllHtmlEntities: __webpack_require__(5)
 };
 
 /***/ },
-/* 13 */
+/* 12 */
 /***/ function(module, exports) {
 
 var HTML_ALPHA = ['apos', 'nbsp', 'iexcl', 'cent', 'pound', 'curren', 'yen', 'brvbar', 'sect', 'uml', 'copy', 'ordf', 'laquo', 'not', 'shy', 'reg', 'macr', 'deg', 'plusmn', 'sup2', 'sup3', 'acute', 'micro', 'para', 'middot', 'cedil', 'sup1', 'ordm', 'raquo', 'frac14', 'frac12', 'frac34', 'iquest', 'Agrave', 'Aacute', 'Acirc', 'Atilde', 'Auml', 'Aring', 'Aelig', 'Ccedil', 'Egrave', 'Eacute', 'Ecirc', 'Euml', 'Igrave', 'Iacute', 'Icirc', 'Iuml', 'ETH', 'Ntilde', 'Ograve', 'Oacute', 'Ocirc', 'Otilde', 'Ouml', 'times', 'Oslash', 'Ugrave', 'Uacute', 'Ucirc', 'Uuml', 'Yacute', 'THORN', 'szlig', 'agrave', 'aacute', 'acirc', 'atilde', 'auml', 'aring', 'aelig', 'ccedil', 'egrave', 'eacute', 'ecirc', 'euml', 'igrave', 'iacute', 'icirc', 'iuml', 'eth', 'ntilde', 'ograve', 'oacute', 'ocirc', 'otilde', 'ouml', 'divide', 'Oslash', 'ugrave', 'uacute', 'ucirc', 'uuml', 'yacute', 'thorn', 'yuml', 'quot', 'amp', 'lt', 'gt', 'oelig', 'oelig', 'scaron', 'scaron', 'yuml', 'circ', 'tilde', 'ensp', 'emsp', 'thinsp', 'zwnj', 'zwj', 'lrm', 'rlm', 'ndash', 'mdash', 'lsquo', 'rsquo', 'sbquo', 'ldquo', 'rdquo', 'bdquo', 'dagger', 'dagger', 'permil', 'lsaquo', 'rsaquo', 'euro', 'fnof', 'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega', 'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigmaf', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega', 'thetasym', 'upsih', 'piv', 'bull', 'hellip', 'prime', 'prime', 'oline', 'frasl', 'weierp', 'image', 'real', 'trade', 'alefsym', 'larr', 'uarr', 'rarr', 'darr', 'harr', 'crarr', 'larr', 'uarr', 'rarr', 'darr', 'harr', 'forall', 'part', 'exist', 'empty', 'nabla', 'isin', 'notin', 'ni', 'prod', 'sum', 'minus', 'lowast', 'radic', 'prop', 'infin', 'ang', 'and', 'or', 'cap', 'cup', 'int', 'there4', 'sim', 'cong', 'asymp', 'ne', 'equiv', 'le', 'ge', 'sub', 'sup', 'nsub', 'sube', 'supe', 'oplus', 'otimes', 'perp', 'sdot', 'lceil', 'rceil', 'lfloor', 'rfloor', 'lang', 'rang', 'loz', 'spades', 'clubs', 'hearts', 'diams'];
@@ -1930,7 +1927,7 @@ Html4Entities.encodeNonASCII = function (str) {
 module.exports = Html4Entities;
 
 /***/ },
-/* 14 */
+/* 13 */
 /***/ function(module, exports) {
 
 var ALPHA_INDEX = {
@@ -2088,7 +2085,7 @@ XmlEntities.encodeNonASCII = function (str) {
 module.exports = XmlEntities;
 
 /***/ },
-/* 15 */
+/* 14 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -2182,7 +2179,7 @@ var isArray = Array.isArray || function (xs) {
 };
 
 /***/ },
-/* 16 */
+/* 15 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -2271,30 +2268,30 @@ var objectKeys = Object.keys || function (obj) {
 };
 
 /***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+'use strict';
+
+exports.decode = exports.parse = __webpack_require__(14);
+exports.encode = exports.stringify = __webpack_require__(15);
+
+/***/ },
 /* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 'use strict';
 
-exports.decode = exports.parse = __webpack_require__(15);
-exports.encode = exports.stringify = __webpack_require__(16);
-
-/***/ },
-/* 18 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-'use strict';
-
-var ansiRegex = __webpack_require__(11)();
+var ansiRegex = __webpack_require__(10)();
 
 module.exports = function (str) {
 	return typeof str === 'string' ? str.replace(ansiRegex, '') : str;
 };
 
 /***/ },
-/* 19 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 /*eslint-env browser*/
@@ -2321,7 +2318,7 @@ for (var key in styles) {
   clientOverlay.style[key] = styles[key];
 }
 
-var ansiHTML = __webpack_require__(10);
+var ansiHTML = __webpack_require__(9);
 var colors = {
   reset: ['transparent', 'transparent'],
   black: '181818',
@@ -2336,7 +2333,7 @@ var colors = {
 };
 ansiHTML.setColors(colors);
 
-var Entities = __webpack_require__(12).AllHtmlEntities;
+var Entities = __webpack_require__(11).AllHtmlEntities;
 var entities = new Entities();
 
 exports.showProblems = function showProblems(type, lines) {
@@ -2370,7 +2367,7 @@ function problemType(type) {
 }
 
 /***/ },
-/* 20 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 /**
@@ -2500,7 +2497,7 @@ module.exports = function (hash, moduleMap, options) {
 };
 
 /***/ },
-/* 21 */
+/* 20 */
 /***/ function(module, exports) {
 
 module.exports = function (module) {
@@ -2529,24 +2526,37 @@ module.exports = function (module) {
 };
 
 /***/ },
+/* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(1);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(3)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(true) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept(1, function() {
+			var newContent = __webpack_require__(1);
+			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ },
 /* 22 */,
 /* 23 */,
 /* 24 */,
 /* 25 */,
-/* 26 */
-/***/ function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)();
-// imports
-
-
-// module
-exports.push([module.i, "\n@charset \"utf-8\"\n\n.setting_left {\n\tbackground-color: #fff;\n\t-webkit-box-shadow: 0 0 10px #ccc;\n\t-moz-box-shadow: 0 0 10px #ccc;\n\tbox-shadow: 0 0 10px #ccc;\n\tpadding:0;\n}\n\n\n.setting_left li {\n    position: relative;\n    padding-left: 10px;\n    border-bottom: 1px solid #e6e8e9;\n    margin-bottom: -1px;\n    transition:all 0.35s;\n}\n\n.setting_left a {\n    display: block;\n    height: 59px;\n    line-height: 59px;\n    font-size: 14px;\n    color: inherit;\n    border-color: transparent;\n    -webkit-transition: color, border-color 0.2s;\n    -moz-transition: color, border-color 0.2s;\n    -ms-transition: color, border-color 0.2s;\n    transition: color, border-color 0.2s;\n}\n\n.setting_left li:hover, .setting_left .blog_active{\n    padding-left:36px;\n    color: #005588;\n    transition:all 0.35s;\n}\n\n\n.setting_right {\n\tbackground-color: #fff;\n    -webkit-box-shadow: 0 0 10px #ccc;\n    -moz-box-shadow: 0 0 10px #ccc;\n    box-shadow: 0 0 10px #ccc;\n    position: relative;\n    padding: 0 30px 30px 30px;\n    min-height: 500px;\n    padding-bottom: 200px;\n}\n\n#upload_img {\n\tmargin: 0 auto;\n\tpadding-top: 100px;\n}\n#upload_img img {\n    min-height:230px;\n}\n.progress {\n    margin-top: 140px;\n}\n.avator_btn_wrap {\n\tposition: relative;\n}\n.avator_btn {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n}\n#signature {\n    height: 200px;\n}", ""]);
-
-// exports
-
-
-/***/ },
+/* 26 */,
 /* 27 */,
 /* 28 */,
 /* 29 */,
@@ -2557,35 +2567,22 @@ exports.push([module.i, "\n@charset \"utf-8\"\n\n.setting_left {\n\tbackground-c
 /* 34 */,
 /* 35 */,
 /* 36 */,
-/* 37 */
-/***/ function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(26);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// add the styles to the DOM
-var update = __webpack_require__(1)(content, {});
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(true) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept(26, function() {
-			var newContent = __webpack_require__(26);
-			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ },
+/* 37 */,
 /* 38 */,
 /* 39 */,
-/* 40 */,
+/* 40 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+'use strict';
+
+// if (process.env.NODE_ENV !== 'production') {
+//   require('../../app/views/manager/config.ejs')
+// }
+
+__webpack_require__(8);
+
+/***/ },
 /* 41 */,
 /* 42 */,
 /* 43 */,
@@ -2594,142 +2591,16 @@ if(true) {
 /* 46 */,
 /* 47 */,
 /* 48 */,
-/* 49 */
-/***/ function(module, exports, __webpack_require__) {
-
-var _this = this;
-
-__webpack_require__(37);
-if (true) {
-  module.hot.accept();
-}
-let $ = __webpack_require__(4);
-$(() => {
-  let img = document.getElementById('img');
-
-  if (!window.File && !window.FileList && !window.FileReader && !window.Blob) {
-    $('.upload_info').html('"您的浏览器不支持HTML5上传"');
-    $('.upload_info').show();
-  }
-  $('#upload_img img').on('drag', ev => {
-    let e = ev || event;
-    e.preventDefault();
-  });
-  $('#upload_img img').on('dragenter', ev => {
-    let e = ev || event;
-    e.preventDefault();
-  });
-  $('#upload_img img').on('dragover', ev => {
-    let e = ev || event;
-    e.preventDefault();
-  });
-  // $('#upload_img img').on('dragend', function() {
-  // 	ev.preventDefault();
-  // })
-  $('#upload_img img').on('drog', () => {
-    let e = ev || event;
-    e.preventDefault();
-
-    let xhr = new XMLHttpRequest();
-
-    xhr.onload = () => {
-      //console.log(this.responseText);
-      let data = JSON.parse(_this.responseText);
-      message.innerHTML = '上传成功';
-      $('#upload_img img').attr('src', data.path);
-      console.log($('.header_icon'));
-      $('.header_icon').attr('src', data.path);
-    };
-
-    xhr.open('post', '/api/avator', true);
-
-    //xhr.upload : 上传进度对象
-    xhr.upload.onloadstart = () => {
-      console.log('开始上传');
-    };
-    xhr.upload.onprogress = ev => {
-      console.log('正在上传：' + ev.loaded + ' / ' + ev.total);
-
-      let a = ev.loaded / ev.total;
-      console.log(a);
-      $('#upload_img .progress-bar').css('width', a * 100 + '%');
-      $('#upload_img .progress-bar').html(parseInt(a * 100) + '%');
-    };
-    xhr.upload.onload = function () {
-      console.log('上传完成');
-      $('#upload_img .progress-bar').css('width', '200px');
-      $('#upload_img .progress-bar').html('上传完成');
-    };
-
-    let fd = new FormData();
-    fd.append('f', ev.dataTransfer.files[0]);
-    xhr.send(fd);
-  });
-
-  $('#upload_img .btn').on('click', ev => {
-    let e = ev || event;
-    e.preventDefault();
-
-    let xhr = new XMLHttpRequest();
-
-    xhr.onload = function () {
-      let data = JSON.parse(this.responseText);
-      $('#upload_img img').attr('src', data.path);
-      $('.header_icon').attr('src', data.path);
-    };
-
-    xhr.open('post', '/api/avator', true);
-
-    //xhr.upload : 上传进度对象
-    xhr.upload.onloadstart = () => {
-      console.log('开始上传');
-    };
-    xhr.upload.onprogress = ev => {
-      console.log('正在上传：' + ev.loaded + ' / ' + ev.total);
-
-      let a = ev.loaded / ev.total;
-      $('#upload_img .progress-bar').css('width', a * 100 + '%');
-      $('#upload_img .progress-bar').html(parseInt(a * 100) + '%');
-    };
-    xhr.upload.onload = () => {
-      console.log('上传完成');
-      $('#upload_img .progress-bar').css('width', 100 + '%');
-      $('#upload_img .progress-bar').html('上传完成');
-    };
-    let fd = new FormData();
-    fd.append('f', img.files[0]);
-    xhr.send(fd);
-  });
-});
-
-/***/ },
+/* 49 */,
 /* 50 */,
 /* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */,
-/* 55 */,
-/* 56 */,
-/* 57 */,
-/* 58 */,
-/* 59 */,
-/* 60 */,
-/* 61 */,
-/* 62 */,
-/* 63 */,
-/* 64 */,
-/* 65 */,
-/* 66 */,
-/* 67 */,
-/* 68 */,
-/* 69 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 __webpack_require__(7);
-__webpack_require__(49);
+__webpack_require__(40);
 module.exports = __webpack_require__(6);
 
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=bundle.js.map

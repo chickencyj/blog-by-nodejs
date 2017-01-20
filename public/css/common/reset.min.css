@@ -1,232 +1,82 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-	margin: 0;
-	padding: 0
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-	display: block
-}
-
-body {
-	line-height: 1
-}
-
-ol,
-ul {
-	list-style: none
-}
-
-blockquote,
-q {
-	quotes: none
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-	content: none
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0
-}
-
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
 .blog_dn {
-	display: none;
+	display:none;
 }
-
 .blog_w0 {
 	width: 0%;
 }
-
 .blog_w45_h45 {
 	width: 45px;
 	height: 45px;
 }
-
 .blog_xh {
 	overflow-x: hidden;
 }
-
 .blog_h {
 	overflow: hidden;
 }
-
 .blog_p0 {
-	padding: 0;
+	padding:0;
 }
-
 .blog_ic {
 	text-align: center;
 }
-
 .blog_cw {
 	color: #fff;
 }
-
 .blog_fl {
 	float: left;
 }
-
 .blog_fr {
 	float: right;
 }
-
 .blog_mt10 {
 	margin-top: 10px;
 }
-
 .blog_mt30 {
 	margin-top: 30px;
 }
-
 .blog_mt50 {
 	margin-top: 50px;
 }
-
 .blog_ml300 {
 	margin-left: 300px;
 }
-
 .blog_ml500 {
 	margin-left: 420px;
 }
-
 .blog_fs16 {
 	font-size: 16px;
 }
-
 .blog_wrapper {
 	min-height: initial;
 	padding: 180px 0;
-	position: relative;
-	color: #f3f3f3;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: top;
-	min-height: 300px;
-	margin-top: -51px;
-	background-attachment: fixed;
+  position: relative;
+  color: #f3f3f3;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  min-height: 300px;
+  margin-top: -51px;
+  background-attachment: fixed;
 }
-
 .blog_wrap_indeximg {
 	background-image: url('http://7xsn9b.com1.z0.glb.clouddn.com/tagBg.jpg');
 }
-
 .blog_wrap_tagimg {
 	background-image: url('http://7xsn9b.com1.z0.glb.clouddn.com/blog_wrap_tag.jpg');
 }
-
 .blog_wrap_articleimg {
 	background-image: url('http://7xsn9b.com1.z0.glb.clouddn.com/blog_wrap_article.jpg');
 }
-
 .blog_wrap_authorimg {
 	background-image: url('http://7xsn9b.com1.z0.glb.clouddn.com/blog_wrap_author.jpg');
 }
-
 .blog_wrap_resultimg {
 	background-image: url('http://7xsn9b.com1.z0.glb.clouddn.com/blog_wrap_result.jpg');
 }
-
 .blog_wrap_errorimg {
 	background-image: url('http://7xsn9b.com1.z0.glb.clouddn.com/error.jpg');
-	background-position: 0 -450px;
+	background-position:0 -450px;
 	padding: 120px 0;
 }

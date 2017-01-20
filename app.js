@@ -129,6 +129,7 @@ if (isDev) {
   });
 
 } else {
+  app.use(express.static(path.join(__dirname, 'public')));
   const main = require('./configs/main')(app);
   const admin = require('./configs/admin')(app);
   const api = require('./configs/api')(app);
@@ -167,13 +168,13 @@ if (isDev) {
   // // no stacktraces leaked to user
   app.use(function (err, req, res, next) {
     res.status(err.status || 500);
+    console.log(err)
     res.render('error', {
       title: '你来到了一片荒芜之地',
       message: err.message,
       error: {}
     });
   });
-  app.use(express.static(path.join(__dirname, 'public')));
   app.listen(port);
   console.log('Blog satrt on port:' + port);
   module.exports = app;

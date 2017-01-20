@@ -8,7 +8,8 @@ let main = (app) => {
 	mainApp.set('views', path.join(__dirname, '../app/views/main'));
 	mainApp.set('view engine', 'ejs');
 
-
+	mainApp.locals.env = process.env.NODE_ENV || 'dev';
+	mainApp.locals.reload = true;
 	mainApp.use((req, res, next) => {
 		let _user = req.session.user;
 		mainApp.locals.user = _user;

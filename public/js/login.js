@@ -1,7 +1,7 @@
+// if (process.env.NODE_ENV !== 'production') {
+//   require('../../app/views/main/login.ejs')
+// }
 require('../css/login_reg.css');
-if (module.hot) {
-	module.hot.accept();
-}
 let $ = require("jquery");
 let canvas = require('./common/canvas.js');
 let user = require('./common/user.js');

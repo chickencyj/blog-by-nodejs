@@ -8,8 +8,8 @@ let admin = app => {
 	adminApp.set('views', path.join(__dirname, '../app/views/admin'));
 	adminApp.set('view engine', 'ejs');
 
-	app.locals.env = process.env.NODE_ENV || 'dev';
-	app.locals.reload = true;
+	adminApp.locals.env = process.env.NODE_ENV || 'dev';
+	adminApp.locals.reload = true;
 	adminApp.use((req, res, next) => {
 		let _user = req.session.user;
 		adminApp.locals.user = _user;

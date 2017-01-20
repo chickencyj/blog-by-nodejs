@@ -1,3 +1,7 @@
+// if (process.env.NODE_ENV !== 'production') {
+//   require('../../app/views/main/index.ejs')
+// }
+
 require('../css/author_index.css');
 let $ = require("jquery");
 let textAjax = require('./common/textAjax.js');

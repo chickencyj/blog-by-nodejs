@@ -9,8 +9,8 @@ const Article = require('../../models/article');
  */
 router.get('/post', (req, res, next) => {
 	res.render('post', {
-		title: '发表文章',
-		article: {}
+				title: '发表文章',
+				article: {}
 	})
 })
 

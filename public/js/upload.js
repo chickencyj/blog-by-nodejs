@@ -1,7 +1,7 @@
+// if (process.env.NODE_ENV !== 'production') {
+//   require('../../app/views/admin/setavator.ejs')
+// }
 require('../css/manager.css');
-if (module.hot) {
-	module.hot.accept();
-}
 let $ = require("jquery");
 $(() => {
 	let img = document.getElementById('img');

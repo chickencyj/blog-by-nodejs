@@ -17,11 +17,7 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  <% if (env === "production") { %>
-    <link rel="stylesheet" type="text/css" href="/css/common/reset.min.css" />
-    <link rel="stylesheet" type="text/css" href="/libs/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="/css/common/header.css" />
-    <% } %>
+    <%- include head %>
 </head>
 
 <body class="blog_xh">

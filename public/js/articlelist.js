@@ -1,3 +1,6 @@
+// if (process.env.NODE_ENV !== 'production') {
+//   require('../../app/views/admin/articlelist.ejs')
+// }
 require('../css/article.css');
 let $ = require("jquery");
 $(() => {

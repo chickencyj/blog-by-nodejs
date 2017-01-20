@@ -7,8 +7,8 @@ let api = (app) => {
 	apiApp.set('views', path.join(__dirname, '../app/views/main'));
 	apiApp.set('view engine', 'ejs');
 
-	app.locals.env = process.env.NODE_ENV || 'dev';
-	app.locals.reload = true;
+	apiApp.locals.env = process.env.NODE_ENV || 'dev';
+	apiApp.locals.reload = true;
 	apiApp.use((req, res, next) => {
 		let _user = req.session.user;
 		apiApp.locals.user = _user;

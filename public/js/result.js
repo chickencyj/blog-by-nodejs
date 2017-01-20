@@ -1,7 +1,7 @@
+// if (process.env.NODE_ENV !== 'production') {
+//   require('../../app/views/main/result.ejs')
+// }
 require('../css/result_tag.css');
-if (module.hot) {
-	module.hot.accept();
-}
 let $ = require("jquery");
 let imgAjax = require('./common/imgAjax');
 $(() => {

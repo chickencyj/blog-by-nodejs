@@ -7,8 +7,8 @@ let manager = (app) => {
 	managerApp.set('views', path.join(__dirname, '../app/views/manager'));
 	managerApp.set('view engine', 'ejs');
 
-	app.locals.env = process.env.NODE_ENV || 'dev';
-	app.locals.reload = true;
+	managerApp.locals.env = process.env.NODE_ENV || 'dev';
+	managerApp.locals.reload = true;
 	managerApp.use((req, res, next) => {
 		let _user = req.session.user;
 		managerApp.locals.user = _user;
