@@ -240,7 +240,7 @@
 /******/ 				};
 /******/ 			});
 /******/ 			hotUpdate = {};
-/******/ 			var chunkId = 9;
+/******/ 			var chunkId = 7;
 /******/ 			{ // eslint-disable-line no-lone-blocks
 /******/ 				/*globals chunkId */
 /******/ 				hotEnsureUpdateChunk(chunkId);
@@ -702,7 +702,7 @@
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(49)(__webpack_require__.s = 49);
+/******/ 	return hotCreateRequire(56)(__webpack_require__.s = 56);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -2553,7 +2553,10 @@ if(true) {
 
 /***/ },
 /* 22 */,
-/* 23 */
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
@@ -2561,27 +2564,27 @@ exports = module.exports = __webpack_require__(2)();
 
 
 // module
-exports.push([module.i, ".article-preview {\n    font-family: 'Lora', 'Times New Roman', serif;\n    color: #808080;\n    font-size: 18px;\n    font-style: italic;\n    margin-top: 0;\n}\n\n.article-preview span:nth-child(n) {\n\tmargin-right: 20px ;\n}\n.article-preview_text {\n\tline-height: 1.5;\n\tfont-style: normal;\n\tword-spacing: 2px;\n}\n\n.pager .previous>a {\n\tfloat: left;\n}\n.pager .next>a {\n\tfloat: right;\n\twidth:134px;\n}\n#article .row>div:nth-child(1) {\n\tmin-height: 840px;\n}\n#article .thumbnail .caption {\n\ttext-align: center;\n}\n#article .thumbnail .caption>* {\n\tmargin: 10px!important\t;\n}\n\n.tags_body {\n\tmargin-top:10px;\n\tline-height: 24px;\n\tletter-spacing: -0.31em;\n}\n.tags_body a:hover,.tag-alone:hover {\n\tbackground: #ccc!important;\n}\n\n.tags_body a:link ,.tag-alone:link{\n\tbackground-color: #f5f5f5;\n  color: #37A;\n}\n\n.tags_body a , .tag-alone{\n    display: inline-block;\n    letter-spacing: normal;\n    margin: 0 8px 8px 0;\n    padding: 0 8px;\n    background-color: #f5f5f5;\n    -webkit-border-radius: 2px;\n    -moz-border-radius: 2px;\n    border-radius: 2px;\n}\n.tags_body a:visited ,.tag-alone:visited{\n    color: #666699;\n    text-decoration: none;\n}\n\n.article_sidebar {\n\tmargin: 50px 0;\n\tbackground-color: #f9f9f9;\n\tletter-spacing: 1px;\n\tbox-shadow: 4px 4px 3px #eee;\n}\n.article_sidebar h4 {\n\tmargin-top: 10px!important;\n\ttext-align: center;\n}\n.article_sidebar p {\n\tmargin-top: 10px;\n\twhite-space: nowrap;\n\toverflow: hidden;\n}", ""]);
+exports.push([module.i, ".setting_left {\n\tbackground-color: #fff;\n\t-webkit-box-shadow: 0 0 10px #ccc;\n\t-moz-box-shadow: 0 0 10px #ccc;\n\tbox-shadow: 0 0 10px #ccc;\n\tpadding:0;\n}\n\n\n.setting_left li {\n    position: relative;\n    padding-left: 10px;\n    border-bottom: 1px solid #e6e8e9;\n    margin-bottom: -1px;\n    transition:all 0.35s;\n}\n\n.setting_left a {\n    display: block;\n    height: 59px;\n    line-height: 59px;\n    font-size: 14px;\n    color: inherit;\n    border-color: transparent;\n    -webkit-transition: color, border-color 0.2s;\n    -moz-transition: color, border-color 0.2s;\n    -ms-transition: color, border-color 0.2s;\n    transition: color, border-color 0.2s;\n}\n\n.setting_left li:hover, .setting_left .blog_active{\n    padding-left:36px;\n    color: #005588;\n    transition:all 0.35s;\n}\n\n\n.setting_right {\n\tbackground-color: #fff;\n    -webkit-box-shadow: 0 0 10px #ccc;\n    -moz-box-shadow: 0 0 10px #ccc;\n    box-shadow: 0 0 10px #ccc;\n    position: relative;\n    padding: 0 30px 30px 30px;\n    min-height: 500px;\n    padding-bottom: 200px;\n}\n\n#upload_img {\n\tmargin: 0 auto;\n\tpadding-top: 100px;\n}\n#upload_img img {\n    min-height:230px;\n}\n.progress {\n    margin-top: 140px;\n}\n.avator_btn_wrap {\n\tposition: relative;\n}\n.avator_btn {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n}\n#signature {\n    height: 200px;\n}", ""]);
 
 // exports
 
 
 /***/ },
-/* 24 */,
-/* 25 */,
-/* 26 */,
 /* 27 */,
 /* 28 */,
 /* 29 */,
 /* 30 */,
 /* 31 */,
-/* 32 */
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(23);
+var content = __webpack_require__(26);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
 var update = __webpack_require__(3)(content, {});
@@ -2590,8 +2593,8 @@ if(content.locals) module.exports = content.locals;
 if(true) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept(23, function() {
-			var newContent = __webpack_require__(23);
+		module.hot.accept(26, function() {
+			var newContent = __webpack_require__(26);
 			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
 			update(newContent);
 		});
@@ -2601,43 +2604,44 @@ if(true) {
 }
 
 /***/ },
-/* 33 */,
-/* 34 */,
-/* 35 */,
 /* 36 */,
-/* 37 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-'use strict';
-
-// if (process.env.NODE_ENV !== 'production') {
-//   require('../../app/views/main/article.ejs')
-// }
-
-__webpack_require__(32);
-var $ = __webpack_require__(4);
-module.exports = $(function () {
-    $('[data-toggle="popover"]').popover();
-});
-
-/***/ },
+/* 37 */,
 /* 38 */,
 /* 39 */,
 /* 40 */,
 /* 41 */,
 /* 42 */,
 /* 43 */,
-/* 44 */,
+/* 44 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+'use strict';
+
+// if (process.env.NODE_ENV !== 'production') {
+//   require('../../app/views/admin/password.ejs')
+//   require('../../app/views/admin/setprofile.ejs')
+// }
+
+__webpack_require__(35);
+
+/***/ },
 /* 45 */,
 /* 46 */,
 /* 47 */,
 /* 48 */,
-/* 49 */
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 __webpack_require__(7);
-__webpack_require__(37);
+__webpack_require__(44);
 module.exports = __webpack_require__(6);
 
 

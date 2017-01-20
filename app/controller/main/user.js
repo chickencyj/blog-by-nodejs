@@ -1,5 +1,5 @@
 const express = require('express'),
-			router = express.Router();
+	router = express.Router();
 
 router.get('/login', (req, res, next) => {
 	res.render('login', {
@@ -10,7 +10,7 @@ router.get('/login', (req, res, next) => {
 })
 
 router.get('/reg', (req, res, next) => {
-	res.render('register',{
+	res.render('register', {
 		title: '注册',
 		message: false
 	})

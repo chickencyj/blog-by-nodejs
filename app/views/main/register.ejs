@@ -1,55 +1,57 @@
 <%- include ../common/header_lr %>
-<article>
-<% if(message) { %>
-  <div class="blog_mt50 alert alert-danger"><%= message %></div>
-<% } %>
-<div class="container">
-	<div class="row">
-		<form class="form-horizontal reg_form col-lg-12  col-md-12 col-ms-12 col-xs-12" method="POST" action="/api/user/reg">
-			<div class="form-group">
-				<label class="col-sm-2 col-sm-offset-1 control-label" for="signupName">用户名</label>
-				<div class="col-sm-6">
-					<input class="form-control ver" id="signupName" name="user[name]" type="text" />
-					<p class="msg">请输入用户名</p>
-				</div>	
+	<article>
+		<% if(message) { %>
+			<div class="blog_mt50 alert alert-danger">
+				<%= message %>
 			</div>
-			<div class="form-group">
-				<label class="col-sm-2 col-sm-offset-1 control-label" for="email">邮箱</label>
-				<div class="col-sm-6">
-					<!-- <div class="input-group-addon">邮箱</div> -->
-					<input class="form-control ver" id="email" name="user[email]" type="email"  />
-					<p class="msg">请输入邮箱</p>
+			<% } %>
+				<div class="container">
+					<div class="row">
+						<form class="form-horizontal reg_form col-lg-12  col-md-12 col-ms-12 col-xs-12" method="POST" action="/api/user/reg">
+							<div class="form-group">
+								<label class="col-sm-2 col-sm-offset-1 control-label" for="signupName">用户名</label>
+								<div class="col-sm-6">
+									<input class="form-control ver" id="signupName" name="user[name]" type="text" />
+									<p class="msg">请输入用户名</p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 col-sm-offset-1 control-label" for="email">邮箱</label>
+								<div class="col-sm-6">
+									<!-- <div class="input-group-addon">邮箱</div> -->
+									<input class="form-control ver" id="email" name="user[email]" type="email" />
+									<p class="msg">请输入邮箱</p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 col-sm-offset-1 control-label" for="signupPwd">密码</label>
+								<div class="col-sm-6">
+									<input class="form-control ver" id="signupPwd" name="user[password]" type="password" />
+									<p class="msg">请输入密码</p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 col-sm-offset-1 control-label" for="confirmPwd">密码确认</label>
+								<div class="col-sm-6">
+									<input class="form-control ver" id="confirmPwd" name="user[confirmpwd]" type="password" />
+									<p class="msg">请确认密码</p>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-offset-3 col-sm-2">
+									<button class="btn btn-default" type="submit" id="reg_btn">注册</button>
+								</div>
+							</div>
+						</form>
+					</div>
 				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-sm-2 col-sm-offset-1 control-label" for="signupPwd">密码</label>
-				<div class="col-sm-6">
-					<input class="form-control ver" id="signupPwd" name="user[password]" type="password"  />
-					<p class="msg">请输入密码</p>
-				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-sm-2 col-sm-offset-1 control-label" for="confirmPwd">密码确认</label>
-				<div class="col-sm-6">
-					<input class="form-control ver" id="confirmPwd" name="user[confirmpwd]" type="password"  />
-					<p class="msg">请确认密码</p>
-				</div>
-			</div>
-			<div class="form-group">
-				<div class="col-sm-offset-3 col-sm-2">
-					<button class="btn btn-default" type="submit" id="reg_btn" >注册</button>
-				</div>
-			</div>
-		</form>
-	</div>
-</div>
-<canvas id="regCanvas"></canvas>
-</article>
-<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+				<canvas id="regCanvas"></canvas>
+	</article>
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/assets/register.js" charset="utf-8"></script>
+	</body>
 
-<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/assets/register.js" charset="utf-8"></script>
-</body>
-</html>
+	</html>

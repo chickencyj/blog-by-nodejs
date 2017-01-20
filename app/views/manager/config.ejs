@@ -1,62 +1,67 @@
 <%- include ../common/header_config %>
-<section>
-  <div class="blog_wrapper blog_wrap_indeximg">
-    <div class="clearfix container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
-          <h1 class="header_title"><%= title %></h1>
+    <section>
+        <div class="blog_wrapper blog_wrap_indeximg">
+            <div class="clearfix container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+                        <h1 class="header_title">
+                            <%= title %>
+                        </h1>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
+    <div class="container-fluid admin-header-mt ">
+        <h3>用户列表</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>用户名</th>
+                    <th>头像</th>
+                    <th>文章</th>
+                    <th>邮箱</th>
+                    <th>管理员</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% users.forEach(function (user, index)  { %>
+                    <tr>
+                        <td>
+                            <%= user._id.toString() %>
+                        </td>
+                        <td>
+                            <%= user.name %>
+                        </td>
+                        <td>
+                            <% if(user.avator) { %>
+                                <img class="blog_w45_h45" src="/upload/<%= user.avator %>" />
+                                <% } else { %>
+                                    <img class="blog_w45_h45" src="<%= user.head %>" />
+                                    <% } %>
+                        </td>
+                        <td>
+                            <a href="/admin/article/author/<%= user._id %>">(<%= user.articles.length %>)</a>
+                        </td>
+                        <td>
+                            <%= user.email %>
+                        </td>
+                        <td>
+                            <% if (user.role > 50) { %>
+                                √
+                                <% } else { %>
+                                    ×
+                                    <% } %>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
     </div>
-  </div>
-</section>
-<div class="container-fluid admin-header-mt ">
-
-    <h3>用户列表</h3>
-
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>用户名</th>
-                <th>头像</th>
-                <th>文章</th>
-                <th>邮箱</th>
-                <th>管理员</th>
-                <th>操作</th>
-            </tr>
-        </thead>
-        <tbody>
-            <% users.forEach(function (user, index)  { %>
-            <tr>
-                <td><%= user._id.toString() %></td>
-                <td><%= user.name %></td>
-
-                <td>
-                    <% if(user.avator) { %>
-                        <img class="blog_w45_h45" src="/upload/<%= user.avator %>" />
-                        <% } else { %>
-                        <img class="blog_w45_h45" src="<%= user.head %>" />
-                    <% } %>
-                </td>
-                <td>
-                    <a href="/admin/article/author/<%= user._id %>">(<%= user.articles.length %>)</a>
-                </td>
-                <td><%= user.email %></td>
-                <td>
-                    <% if (user.role > 50) { %>
-                    √
-                    <% } else { %>
-                    ×
-                    <% } %>
-                </td>
-            </tr>
-            <% }) %>
-        </tbody>
-    </table>
-</div>
-</article>
-<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/assets/header.js" charset="utf-8"></script>
-<%- include ../common/footer %>
+    </article>
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/config.js" charset="utf-8"></script>
+    <%- include ../common/footer %>

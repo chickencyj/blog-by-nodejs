@@ -1,23 +1,30 @@
 {
   "name": "blog",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "build": "webpack",
+    "start": "`cross-env NODE_ENV=dev nodemon --watch app --exec  node app.js",
+    "start:HMR": "webpack --config webpack.config.js & cross-env NODE_ENV=dev nodemon --watch app --exec  node app.js",
+    "start:prod": "webpack --config webpack.production.config.js -p & cross-env NODE_ENV=production node app.js",
     "test": "mocha-webpack --webpack-config webpack.config-test.js \"test/**/*.test.js\""
   },
   "dependencies": {
     "bcrypt": "^0.8.7",
     "body-parser": "~1.13.2",
+    "clean-webpack-plugin": "^0.1.15",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^1.2.0",
     "cookie-parser": "~1.3.5",
+    "cross-env": "^3.1.4",
     "debug": "~2.2.0",
-    "ejs": "~2.3.3",
+    "ejs": "^2.5.5",
     "express": "~4.13.1",
     "express-favicon": "^1.0.1",
     "express-session": "^1.13.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "html-webpack-plugin": "^2.26.0",
     "jquery": "^2.2.4",
     "marked": "^0.3.5",
     "moment": "^2.14.1",
@@ -25,23 +32,33 @@
     "mongoose": "^4.5.0",
     "morgan": "~1.6.1",
     "multer": "^1.1.0",
+    "nodemon": "^1.11.0",
+    "raw-loader": "^0.5.1",
+    "reload": "^1.1.0",
     "serve-favicon": "^2.3.0",
     "should": "^9.0.2",
-    "underscore": "^1.8.3",
-    "webpack": "^1.13.1",
-    "webpack-node-externals": "^1.2.0"
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.11.1",
-    "css-loader": "^0.23.1",
-    "file-loader": "^0.9.0",
+    "css-loader": "^0.24.0",
+    "file-loader": "~0.9.0",
     "mocha": "^2.5.3",
     "mocha-webpack": "^0.4.0",
     "style-loader": "^0.13.1",
-    "url-loader": "^0.5.7"
+    "url-loader": "~0.5.7",
+    "webpack": "2.1.0-beta.27",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-dev-server": "^2.1.0-beta.11",
+    "webpack-hot-middleware": "^2.12.2",
+    "webpack-node-externals": "~1.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chickencyj/blog-by-nodejs.git"
   },
   "description": "blog",
   "keywords": [

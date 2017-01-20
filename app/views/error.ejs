@@ -1,41 +1,37 @@
 <%- include ./common/header_config %>
-<section>
-  <div class="blog_wrapper blog_wrap_errorimg">
-    <div class="clearfix container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
-          <h1 class="header_title"><%= title %></h1>
+  <section>
+    <div class="blog_wrapper blog_wrap_errorimg">
+      <div class="clearfix container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+            <h1 class="header_title">
+              <%= title %>
+            </h1>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			<p>你来到这个页面，通常有两个原因</p>
-
-      <h2>一、链接错误</h2>
-
-
-      <h2>二、维度攻击</h2>
-
-      <p>不明力量入侵，你想要访问的页面被摧毁了。</p>
-
-  <pre>         
+  </section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p>你来到这个页面，通常有两个原因</p>
+        <h2>一、链接错误</h2>
+        <h2>二、维度攻击</h2>
+        <p>不明力量入侵，你想要访问的页面被摧毁了。</p>
+        <pre>         
 ---x-----mm--
       /^(  )^\
       \,(..),/        Oops...
         V~~V                     
 一定是发生了什么可怕的事情....
     </pre>
-
-		</div>
-	</div>
-</div>
-<%= error %>
-<hr>
-<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/assets/header.js" charset="utf-8"></script>
-<%- include ./common/footer %>
+      </div>
+    </div>
+  </div>
+  <%= error %>
+    <hr>
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/config.js" charset="utf-8"></script>
+    <%- include ./common/footer %>

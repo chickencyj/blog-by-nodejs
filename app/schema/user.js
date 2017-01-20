@@ -20,7 +20,10 @@ const UserSchema = new mongoose.Schema({
 		type: String
 	},
 	password: String,
-	articles: [{type: ObjectId, ref: 'Article'}],
+	articles: [{
+		type: ObjectId,
+		ref: 'Article'
+	}],
 	pv: {
 		type: Number,
 		default: 0
@@ -39,11 +42,11 @@ const UserSchema = new mongoose.Schema({
 	meta: {
 		createTime: {
 			type: Date,
-			default:Date.now()
+			default: Date.now()
 		},
 		updateTime: {
 			type: Date,
-			default:Date.now()
+			default: Date.now()
 		}
 	}
 })
@@ -79,7 +82,7 @@ const UserSchema = new mongoose.Schema({
 // })
 // //实例方法,实例才可调用
 // UserSchema.methods = {
-	
+
 //   comparePassword: function(_password, cb) {
 //   	var _this = this;
 //   	bcrypt.hash(_this.password,SALT_WORK_FACTORY,function(err,hash){
@@ -92,41 +95,40 @@ const UserSchema = new mongoose.Schema({
 // 	      cb(null, isMatch);
 //     	})
 //   	})
-    
+
 //   }
 // }
 
 //每次存储数据之前都会去调用这个方法
-UserSchema.pre('save', function(next) {
-  var user = this
-  //判断数据是否是新加的
-  if (this.isNew) {
-    this.meta.createAt = this.meta.updateAt = Date.now()
-  }
-  else {
-    this.meta.updateAt = Date.now()
-  }
-  //生成一个随机的盐,接受两个参数，第一个为计算强度，第二个为cb,cb中参数可拿到生成后的salt
-  bcrypt.genSalt(SALT_WORK_FACTORY, function(err, salt) {
-    if (err) return next(err)
-    //hash接受三个参数,第三个参数拿到生成后的hash
-    bcrypt.hash(user.password, salt, function(err, hash) {
-      if (err) return next(err)
+UserSchema.pre('save', function (next) {
+	var user = this
+	//判断数据是否是新加的
+	if (this.isNew) {
+		this.meta.createAt = this.meta.updateAt = Date.now()
+	} else {
+		this.meta.updateAt = Date.now()
+	}
+	//生成一个随机的盐,接受两个参数，第一个为计算强度，第二个为cb,cb中参数可拿到生成后的salt
+	bcrypt.genSalt(SALT_WORK_FACTORY, function (err, salt) {
+		if (err) return next(err)
+		//hash接受三个参数,第三个参数拿到生成后的hash
+		bcrypt.hash(user.password, salt, function (err, hash) {
+			if (err) return next(err)
 
-      user.password = hash
-      next()
-    })
-  })
+			user.password = hash
+			next()
+		})
+	})
 })
 //实例方法,实例才可调用
 UserSchema.methods = {
-  comparePassword: function(_password, cb) {
-    bcrypt.compare(_password, this.password, function(err, isMatch) {
-      if (err) return cb(err)
+	comparePassword: function (_password, cb) {
+		bcrypt.compare(_password, this.password, function (err, isMatch) {
+			if (err) return cb(err)
 
-      cb(null, isMatch)
-    })
-  }
+			cb(null, isMatch)
+		})
+	}
 }
 
 // //只有进行模型编译实例化以后才能有这些方法

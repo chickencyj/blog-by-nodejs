@@ -1,18 +1,18 @@
-
 const express = require('express');
 const apiApp = express();
 const path = require('path');
 
 let api = (app) => {
-	
+
 	apiApp.set('views', path.join(__dirname, '../app/views/main'));
 	apiApp.set('view engine', 'ejs');
 
-
-	apiApp.use( (req, res, next) => {
-	  let _user = req.session.user;
-	  apiApp.locals.user = _user;
-	  next();
+	apiApp.locals.env = process.env.NODE_ENV || 'dev';
+	apiApp.locals.reload = true;
+	apiApp.use((req, res, next) => {
+		let _user = req.session.user;
+		apiApp.locals.user = _user;
+		next();
 	})
 	//路由模块
 	const routers = {
@@ -21,7 +21,7 @@ let api = (app) => {
 		showmore: require('../app/controller/api/showmore')
 	};
 	//主模块
-	apiApp.use( '/', routers.main );
+	apiApp.use('/', routers.main);
 	//用户模块
 	apiApp.use('/user', routers.user);
 
