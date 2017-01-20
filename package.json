@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack --config webpack.config.js & cross-env NODE_ENV=dev nodemon --watch app --exec  node app.js",
+    "start": "cross-env NODE_ENV=dev nodemon --watch app --exec  node app.js",
+    "start:HMR": "webpack --config webpack.config.js & cross-env NODE_ENV=dev nodemon --watch app --exec  node app.js",
     "start:prod": "webpack --config webpack.production.config.js -p & cross-env NODE_ENV=production node app.js",
     "test": "mocha-webpack --webpack-config webpack.config-test.js \"test/**/*.test.js\""
   },
