@@ -60,7 +60,11 @@
 - 安装node(https://nodejs.org/en/);
 - 安装express框架(npm install express -g);
 - 安装mongodb(https://www.mongodb.org/downloads#production)查看说明完成相关环境以及配置搭建;
-- 在当前项目目录中使用npm install命令安装相关模块(<a href="http://npm.taobao.org/" target="\_blank">如果模块下载速度慢可考虑使用淘宝cnpm镜像进行下载</a>);
+- 在当前项目目录中使用yarn命令安装相关模块(<a href="http://npm.taobao.org/" target="\_blank">如果模块下载速度慢可考虑使用淘宝cnpm镜像进行下载</a>);
+
+docker: env=production
+----
+docker-compose -f ./docker/docker-compose.yml up --build
 
 运行与使用:
 ----
