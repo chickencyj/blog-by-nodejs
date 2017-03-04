@@ -64,6 +64,9 @@
 
 docker: env=production
 ----
+切换分支 到feat-docker
+git clone
+cd ~/blog-by-nodejs/
 docker-compose -f ./docker/docker-compose.yml up --build
 
 运行与使用:
