@@ -13,7 +13,7 @@ const port = process.env.PORT || 3000; //PORT=4000 node app
 const app = express();
 
 // const dbUrl = 'mongodb://chicken:3320682@ds021694.mlab.com:21694/articleblog';
-const dbUrl = 'mongodb://localhost/blog';
+const dbUrl = 'mongodb://mongo/blog';
 mongoose.connect(dbUrl);
 
 let isDev = process.env.NODE_ENV !== 'production';

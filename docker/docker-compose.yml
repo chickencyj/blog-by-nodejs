@@ -1,0 +1,57 @@
+version: '2'
+services:
+  blog:
+    build:
+      context: ..
+      dockerfile: ./docker/Dockerfile
+    environment:
+      NODE_ENV: production
+    links:
+      - mongo
+    ports:
+      - "127.0.0.1:3000:3000"
+
+  mongo:
+    # https://hub.docker.com/_/mongo/
+    image: mongo:3.4
+    volumes:
+      - /var/ioopsd/blog/log/mongodb/:/var/log/mongodb/
+      - /var/ioopsd/blog/mongodb/:/data/db/
+    ports:
+      - "127.0.0.1:27017:27017"
+
+  # nginx:
+  #   # https://hub.docker.com/_/nginx/
+  #   image: nginx:1.11-alpine
+  #   links:
+  #     - blog
+  #   ports:
+  #     - "80:80"
+  #     - "443:443"
+  #   volumes:
+  #     - /var/implus/obieighttools/log/nginx/:/var/log/nginx/
+  #     - /etc/ssl/dhparam.pem:/etc/ssl/dhparam.pem
+  #     - /etc/letsencrypt/:/etc/letsencrypt/
+  #     - ./deploy/etc/nginx/nginx.conf:/etc/nginx/nginx.conf
+  #     - ./deploy/etc/nginx/conf.d/obieighttools.com.conf:/etc/nginx/conf.d/obieighttools.com.conf
+  #     - ./deploy/etc/nginx/conf.d/trackobieight.com.conf:/etc/nginx/conf.d/trackobieight.com.conf
+   
+  # cadvisor:
+  #   image: google/cadvisor
+  #   volumes:
+  #     - /:/rootfs:ro
+  #     - /var/run:/var/run:rw
+  #     - /sys:/sys:ro
+  #     - /var/lib/docker/:/var/lib/docker:ro
+  #   expose:
+  #     - 8080
+  #   ports:
+  #     - 8080:8080
+  # mongodb_exporter:
+  #   image: ioopsd/mongodb_exporter
+  #   expose:
+  #     - 9001
+  #   ports:
+  #     - 9001:9001
+  #   command:
+  #     - '-mongodb.uri=mongodb://mongo:27017'
