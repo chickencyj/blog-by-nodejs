@@ -29,12 +29,6 @@ services:
   #     - "80:80"
   #     - "443:443"
   #   volumes:
-  #     - /var/implus/obieighttools/log/nginx/:/var/log/nginx/
-  #     - /etc/ssl/dhparam.pem:/etc/ssl/dhparam.pem
-  #     - /etc/letsencrypt/:/etc/letsencrypt/
-  #     - ./deploy/etc/nginx/nginx.conf:/etc/nginx/nginx.conf
-  #     - ./deploy/etc/nginx/conf.d/obieighttools.com.conf:/etc/nginx/conf.d/obieighttools.com.conf
-  #     - ./deploy/etc/nginx/conf.d/trackobieight.com.conf:/etc/nginx/conf.d/trackobieight.com.conf
    
   # cadvisor:
   #   image: google/cadvisor
